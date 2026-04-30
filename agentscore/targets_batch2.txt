@@ -1,0 +1,37 @@
+# AgentScore — New Targets Batch 2
+# Focus: Enterprise + Trending + Security
+
+# === Enterprise / Major ===
+npx -y @sourcegraph/mcp-server
+npx -y @datadog/mcp-server
+npx -y @elastic/mcp-server
+npx -y @twilio/mcp-server
+npx -y @hubspot/mcp-server
+npx -y @shopify/mcp-server
+npx -y @confluent/mcp-server
+
+# === DevOps / Cloud ===
+npx -y mcp-server-azure
+npx -y mcp-server-gcp
+npx -y mcp-server-nginx
+npx -y mcp-server-prometheus
+
+# === AI / ML ===
+npx -y mcp-server-openai
+npx -y mcp-server-anthropic
+npx -y mcp-server-ollama
+npx -y mcp-server-huggingface
+
+# === Data / Analytics ===
+npx -y mcp-server-bigquery
+npx -y mcp-server-snowflake
+npx -y mcp-server-elasticsearch
+
+# === Communication ===
+npx -y mcp-server-telegram
+npx -y mcp-server-email
+npx -y mcp-server-teams
+
+# === Security ===
+npx -y mcp-server-vault
+npx -y mcp-server-snyk

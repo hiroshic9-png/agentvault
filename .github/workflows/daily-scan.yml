@@ -28,8 +28,71 @@ jobs:
         working-directory: agentscore
         run: node src/cli.js batch targets.txt
         env:
-          # 環境変数でAPI KEYが必要なサーバー用
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Send scan results to telemetry server
+        working-directory: agentscore
+        run: |
+          # スキャン結果のJSONファイルを読み込んでテレメトリ送信
+          SESSION_ID="daily-scan-$(date +%Y%m%d-%H%M%S)"
+          BATCH="[]"
+          
+          for report in reports/*.json; do
+            [ -f "$report" ] || continue
+            
+            # 各レポートファイルからデータポイントを生成
+            SERVER_NAME=$(basename "$report" .json)
+            
+            BATCH=$(node -e "
+              const fs = require('fs');
+              const batch = JSON.parse(process.argv[1]);
+              try {
+                const report = JSON.parse(fs.readFileSync('$report', 'utf8'));
+                const dp = {
+                  event_type: 'quality_scan',
+                  tool_name: report.server_name || '$SERVER_NAME',
+                  source: 'daily-scan',
+                  session_id: '$SESSION_ID',
+                  scan_score: report.overall_score || report.score || 0,
+                  scan_grade: report.grade || 'unknown',
+                  tools_count: report.tools_count || (report.tools ? report.tools.length : 0),
+                  latency_ms: report.scan_duration_ms || report.latency_ms || 0,
+                  input_size: 0,
+                  output_size: JSON.stringify(report).length,
+                  scan_categories: report.categories || {},
+                  timestamp: new Date().toISOString()
+                };
+                batch.push(dp);
+              } catch(e) {
+                console.error('Skip', '$report', e.message);
+              }
+              console.log(JSON.stringify(batch));
+            " "$BATCH")
+          done
+          
+          # テレメトリサーバーに一括送信
+          BATCH_SIZE=$(node -e "console.log(JSON.parse(process.argv[1]).length)" "$BATCH")
+          echo "📡 Sending $BATCH_SIZE data points to telemetry server..."
+          
+          if [ "$BATCH_SIZE" -gt "0" ]; then
+            PAYLOAD=$(node -e "
+              console.log(JSON.stringify({
+                batch: JSON.parse(process.argv[1]),
+                source: 'daily-scan',
+                session_id: '$SESSION_ID'
+              }));
+            " "$BATCH")
+            
+            RESPONSE=$(curl -s -X POST \
+              https://agentvault-telemetry.onrender.com/api/telemetry \
+              -H 'Content-Type: application/json' \
+              -d "$PAYLOAD" \
+              --max-time 30)
+            
+            echo "📊 Telemetry response: $RESPONSE"
+          else
+            echo "⚠️ No scan results to send"
+          fi
 
       - name: Upload scan results
         uses: actions/upload-artifact@v4

@@ -82,17 +82,23 @@ if (!result.allowed) {
 }
 ```
 
-### Protect Your Agent
+### Add Resilience
 ```javascript
-import { createGuard } from 'agentvault-guard';
+import { withRetry } from 'agentvault-retry';
 
-const guard = createGuard({ mode: 'strict' });
+// Automatic retry with exponential backoff
+const result = await withRetry(() => callTool('search', { query: 'test' }), {
+    maxRetries: 3,
+    timeoutMs: 5000,
+});
+```
 
-// Before calling any tool:
-const result = guard.check(toolName, args);
-if (!result.allowed) {
-    console.error('🔴 Blocked:', result.reason);
-}
+### Cache Tool Results
+```javascript
+import { createCache } from 'agentvault-cache';
+
+const cache = createCache({ ttlMs: 60000 });
+const result = await cache.wrap('search:test', () => callTool('search', { query: 'test' }));
 ```
 
 ## Framework Integration

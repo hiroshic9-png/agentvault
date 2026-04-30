@@ -1,0 +1,48 @@
+name: 🏴‍☠️ AgentVault Patrol
+
+on:
+  schedule:
+    # 毎日 UTC 06:00 (JST 15:00) と UTC 18:00 (JST 03:00) に実行
+    - cron: '0 6 * * *'
+    - cron: '0 18 * * *'
+  workflow_dispatch: # 手動実行も可能
+
+jobs:
+  patrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        working-directory: intelligence
+        run: npm ci
+
+      - name: Run patrol
+        working-directory: intelligence
+        run: node research-agent.js
+        env:
+          AGENTVAULT_TELEMETRY_ENDPOINT: https://agentvault-telemetry.onrender.com/api/telemetry
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload patrol data
+        uses: actions/upload-artifact@v4
+        with:
+          name: patrol-data-${{ github.run_number }}
+          path: intelligence/patrol-data/
+          retention-days: 90
+
+      - name: Commit patrol data
+        run: |
+          git config user.name "AgentVault Patrol Bot"
+          git config user.email "bot@agentvault.dev"
+          git add intelligence/patrol-data/
+          git diff --staged --quiet || git commit -m "🏴‍☠️ Patrol: $(date +%Y-%m-%d_%H:%M)"
+          git push || true

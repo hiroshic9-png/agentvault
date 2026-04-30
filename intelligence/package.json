@@ -1,0 +1,14 @@
+{
+  "name": "agentvault-intelligence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AgentVault Research Agent — automated MCP server patrol and data generation",
+  "type": "module",
+  "scripts": {
+    "patrol": "node research-agent.js",
+    "patrol:dry": "node research-agent.js --dry-run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}
