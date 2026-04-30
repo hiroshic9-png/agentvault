@@ -217,9 +217,9 @@ body {
 
 .hero-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 24px;
-    max-width: 700px;
+    max-width: 860px;
     margin: 0 auto;
 }
 .hero-stat {
@@ -544,12 +544,32 @@ section {
 .hero-actions { animation-delay: 0.2s; }
 .hero-stats { animation-delay: 0.3s; }
 
+/* ========== LIVE TELEMETRY DOT ========== */
+.live-stat {
+    position: relative;
+}
+.live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--safe);
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    animation: livePulse 1.5s infinite;
+    box-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
+}
+@keyframes livePulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(52, 211, 153, 0.6); }
+    50% { opacity: 0.5; box-shadow: 0 0 16px rgba(52, 211, 153, 0.3); }
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
     .product-grid { grid-template-columns: 1fr; }
     .guard-demo { grid-template-columns: 1fr; }
     .hero-title { font-size: 36px; }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .hero-stats { grid-template-columns: repeat(3, 1fr); }
     .nav-links a:not(.nav-cta) { display: none; }
     .footer-inner { flex-direction: column; gap: 32px; }
 }
