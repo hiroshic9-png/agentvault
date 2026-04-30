@@ -1,0 +1,41 @@
+# AgentScore — New Servers Scan (2026-05-01)
+# 前回未スキャンの新規サーバー
+
+# === Enterprise / Major ===
+npx -y @docker/mcp-server
+npx -y @stripe/mcp
+npx -y @supabase/mcp-server
+npx -y @apify/actors-mcp-server
+npx -y @ui5/mcp-server
+
+# === Community: DevOps ===
+npx -y mcp-server-git
+npx -y mcp-server-terraform
+
+# === Community: Productivity ===
+npx -y mcp-server-todoist
+npx -y mcp-server-trello
+npx -y mcp-server-linear
+npx -y linear-mcp
+npx -y mcp-obsidian
+
+# === Community: AI & Code ===
+npx -y mcp-server-langchain
+npx -y mcp-server-openapi
+npx -y mcp-server-semgrep
+
+# === Community: Cloud ===
+npx -y mcp-server-aws
+npx -y mcp-server-cloudflare
+npx -y mcp-server-vercel
+npx -y mcp-server-grafana
+
+# === Community: Database ===
+npx -y mcp-server-redis
+npx -y mcp-server-mysql
+npx -y mcp-server-mongodb
+
+# === Community: Search ===
+npx -y firecrawl-mcp
+npx -y @mcp-get-community/server-curl
+npx -y mcp-server-fetch
