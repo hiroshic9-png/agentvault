@@ -1,6 +1,6 @@
 {
   "name": "@agentvault/gateway",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "exports": "./src/index.js",
   "publish": {
     "include": [
