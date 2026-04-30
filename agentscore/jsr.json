@@ -1,0 +1,13 @@
+{
+  "name": "@agentvault/score",
+  "version": "0.1.0",
+  "exports": "./src/index.js",
+  "publish": {
+    "include": [
+      "src/",
+      "dashboard/",
+      "README.md",
+      "LICENSE"
+    ]
+  }
+}
