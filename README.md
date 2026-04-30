@@ -1,15 +1,23 @@
 # 🏴‍☠️ AgentVault
 
+[![npm: gateway](https://img.shields.io/npm/v/agentvault-gateway?label=gateway&color=cc3534)](https://www.npmjs.com/package/agentvault-gateway)
+[![npm: guard](https://img.shields.io/npm/v/agentvault-guard?label=guard&color=cc3534)](https://www.npmjs.com/package/agentvault-guard)
+[![npm: score](https://img.shields.io/npm/v/agentvault-score?label=score&color=cc3534)](https://www.npmjs.com/package/agentvault-score)
+[![JSR: @agentvault](https://jsr.io/badges/@agentvault)](https://jsr.io/@agentvault)
+[![GitHub](https://img.shields.io/github/stars/hiroshic9-png/agentvault?style=social)](https://github.com/hiroshic9-png/agentvault)
+
 > Making AI agents observable, secure, and accountable.
 
 AgentVault is the data infrastructure for the AI agent economy. We build tools that generate trust scores, detect threats, and create intelligence from the MCP (Model Context Protocol) ecosystem.
+
+🌐 **[Website](https://hiroshic9-png.github.io/agentvault/)** · 📦 **[npm](https://www.npmjs.com/search?q=agentvault)** · 📋 **[JSR](https://jsr.io/@agentvault)**
 
 ---
 
 ## Packages
 
-| Package | Description | npm |
-|---------|-------------|-----|
+| Package | Description | Install |
+|---------|-------------|---------|
 | [`agentvault-gateway`](./gateway) | Audit-logging MCP proxy — sits between your agent and any MCP server | `npx agentvault-gateway` |
 | [`agentvault-score`](./agentscore) | Automated quality & security scoring for MCP servers | `npx agentvault-score scan <target>` |
 | [`agentvault-guard`](./guard) | Security middleware — tool poisoning detection, injection prevention | `npm i agentvault-guard` |

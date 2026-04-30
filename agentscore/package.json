@@ -1,6 +1,6 @@
 {
   "name": "agentvault-score",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Automated quality & security scoring for MCP servers — trust scores for the AI agent ecosystem",
   "keywords": [
     "mcp",
@@ -41,11 +41,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agentvault/agentscore"
+    "url": "https://github.com/hiroshic9-png/agentvault"
   },
-  "homepage": "https://github.com/agentvault/agentscore#readme",
+  "homepage": "https://github.com/hiroshic9-png/agentvault#readme",
   "bugs": {
-    "url": "https://github.com/agentvault/agentscore/issues"
+    "url": "https://github.com/hiroshic9-png/agentvault/issues"
   },
   "author": "AgentVault <hello@agentvault.dev>",
   "license": "MIT"

@@ -1,6 +1,6 @@
 {
   "name": "agentvault-guard",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Security guard middleware for MCP clients — tool poisoning detection, input validation, and permission control",
   "keywords": [
     "mcp",
@@ -31,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agentvault/agentvault-guard"
+    "url": "https://github.com/hiroshic9-png/agentvault"
   },
-  "homepage": "https://github.com/agentvault/agentvault-guard#readme",
+  "homepage": "https://github.com/hiroshic9-png/agentvault#readme",
   "author": "AgentVault <hello@agentvault.dev>",
   "license": "MIT"
 }

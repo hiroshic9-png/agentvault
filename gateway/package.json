@@ -1,6 +1,6 @@
 {
   "name": "agentvault-gateway",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MCP Proxy Gateway — Intercept, log, and secure all agent-to-MCP-server traffic",
   "keywords": [
     "mcp",
@@ -39,12 +39,12 @@
   },
   "author": "AgentVault <hello@agentvault.dev>",
   "license": "MIT",
-  "homepage": "https://github.com/agentvault/gateway#readme",
+  "homepage": "https://github.com/hiroshic9-png/agentvault#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/agentvault/gateway"
+    "url": "https://github.com/hiroshic9-png/agentvault"
   },
   "bugs": {
-    "url": "https://github.com/agentvault/gateway/issues"
+    "url": "https://github.com/hiroshic9-png/agentvault/issues"
   }
 }
