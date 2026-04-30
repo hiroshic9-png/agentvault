@@ -24,7 +24,9 @@ const DEFAULT_CONFIG = {
   },
   telemetry: {
     enabled: true,
-    endpoint: null,
+    // opt-in: 環境変数 AGENTVAULT_TELEMETRY_ENDPOINT で中央サーバーに送信
+    // デフォルトはローカルファイルのみ（プライバシー重視）
+    endpoint: process.env.AGENTVAULT_TELEMETRY_ENDPOINT || null,
     logDir: './agentvault-logs',
   },
 };
@@ -54,7 +56,7 @@ export class AgentVaultGateway {
     
     // MCPサーバー（ホスト側に公開するインターフェース）
     this.server = new Server(
-      { name: 'agentvault-gateway', version: '0.1.0' },
+      { name: 'agentvault-gateway', version: '0.2.0' },
       { capabilities: { tools: {}, resources: {}, prompts: {} } }
     );
     
@@ -263,10 +265,13 @@ export class AgentVaultGateway {
     const transport = new StdioServerTransport();
     await this.server.connect(transport);
     
-    console.error('🏴‍☠️ AgentVault Gateway is running');
+    console.error('🏴‍☠️ AgentVault Gateway v0.2.0 is running');
     console.error(`   Target: ${this.config.target || 'not configured'}`);
     console.error(`   Security: ${this.config.security.enabled ? 'ON' : 'OFF'}`);
     console.error(`   Telemetry: ${this.telemetry.enabled ? 'ON' : 'OFF'}`);
+    if (this.config.telemetry.endpoint) {
+      console.error(`   📡 Remote telemetry: ${this.config.telemetry.endpoint}`);
+    }
     console.error(`   Logs: ${this.config.telemetry.logDir}`);
   }
 

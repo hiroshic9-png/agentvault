@@ -78,6 +78,62 @@ if (!result.allowed) {
 }
 ```
 
+### Protect Your Agent
+```javascript
+import { createGuard } from 'agentvault-guard';
+
+const guard = createGuard({ mode: 'strict' });
+
+// Before calling any tool:
+const result = guard.check(toolName, args);
+if (!result.allowed) {
+    console.error('🔴 Blocked:', result.reason);
+}
+```
+
+## Framework Integration
+
+### CrewAI
+```python
+from crewai import Agent
+from crewai.mcp import MCPServerStdio
+
+agent = Agent(
+    role="Research Analyst",
+    goal="Gather data securely via audited MCP tools",
+    mcps=[
+        MCPServerStdio(
+            command="npx",
+            args=["-y", "agentvault-gateway", "--target", "npx -y @modelcontextprotocol/server-github"],
+        )
+    ]
+)
+```
+
+### Claude Desktop (`claude_desktop_config.json`)
+```json
+{
+  "mcpServers": {
+    "github-audited": {
+      "command": "npx",
+      "args": ["-y", "agentvault-gateway", "--target", "npx -y @modelcontextprotocol/server-github"]
+    }
+  }
+}
+```
+
+## Current Leaderboard (Top 5)
+
+| Rank | Server | Score | Grade | Tools |
+|------|--------|-------|-------|-------|
+| 🥇 | mcp-server-sqlite | 98/100 | A+ | 10 |
+| 🥈 | @mapbox/mcp-server | 97/100 | A+ | 28 |
+| 🥉 | mcp-server-kubernetes | 96/100 | A+ | 23 |
+| 4 | server-everything | 94/100 | A+ | 13 |
+| 5 | server-puppeteer | 91/100 | A+ | 7 |
+
+> 21 servers scanned · Average: 89/100 · [Full leaderboard →](https://hiroshic9-png.github.io/agentvault/)
+
 ## License
 
 MIT — Built by AgentVault 🏴‍☠️

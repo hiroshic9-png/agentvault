@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: agentvault-telemetry
+    runtime: node
+    plan: free
+    buildCommand: "echo 'no build needed'"
+    startCommand: "node telemetry-server/server.js"
+    envVars:
+      - key: NODE_VERSION
+        value: 22
