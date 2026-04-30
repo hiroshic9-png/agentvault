@@ -1,5 +1,5 @@
-# AgentScore — Extended Scan Targets v3
-# 30+ MCP Servers (Official + Community)
+# AgentScore — Extended Scan Targets v4
+# 50+ MCP Servers (Official + Enterprise + Community)
 
 # === Official @modelcontextprotocol ===
 npx -y @modelcontextprotocol/server-filesystem /tmp
@@ -8,6 +8,10 @@ npx -y @modelcontextprotocol/server-sequential-thinking
 npx -y @modelcontextprotocol/server-everything
 npx -y @modelcontextprotocol/server-github
 npx -y @modelcontextprotocol/server-puppeteer
+npx -y @modelcontextprotocol/server-postgres
+npx -y @modelcontextprotocol/server-brave-search
+npx -y @modelcontextprotocol/server-slack
+npx -y @modelcontextprotocol/server-google-maps
 
 # === Major Companies ===
 npx -y @notionhq/notion-mcp-server
@@ -15,22 +19,48 @@ npx -y @upstash/context7-mcp
 npx -y @railway/mcp-server
 npx -y @mapbox/mcp-server
 npx -y chrome-devtools-mcp
+npx -y @stripe/mcp
+npx -y @sentry/mcp-server
+npx -y @supabase/mcp-server
 
-# === Community: Developer Tools ===
+# === Community: Browser & Automation ===
 npx -y @executeautomation/playwright-mcp-server
 npx -y @mcp-get-community/server-curl
-npx -y mcp-server-kubernetes
+npx -y mcp-server-fetch
 
-# === Community: Search & Data ===
+# === Community: DevOps & Infrastructure ===
+npx -y mcp-server-kubernetes
+npx -y @docker/mcp-server
+npx -y mcp-server-git
+npx -y mcp-server-terraform
+
+# === Community: Search & Web ===
 npx -y duckduckgo-mcp-server
 npx -y tavily-mcp
 npx -y firecrawl-mcp
+npx -y @anthropic/mcp-server-brave-search
+
+# === Community: Database ===
+npx -y mcp-server-sqlite
+npx -y mcp-server-redis
+npx -y mcp-server-mysql
+npx -y mcp-server-mongodb
 
 # === Community: Productivity ===
 npx -y mcp-obsidian
 npx -y mcp-server-discord
 npx -y mcp-server-linear
 npx -y linear-mcp
+npx -y mcp-server-todoist
+npx -y mcp-server-trello
 
-# === Community: Database ===
-npx -y mcp-server-sqlite
+# === Community: AI & Code ===
+npx -y mcp-server-langchain
+npx -y mcp-server-openapi
+npx -y mcp-server-semgrep
+
+# === Community: Cloud & SaaS ===
+npx -y mcp-server-aws
+npx -y mcp-server-cloudflare
+npx -y mcp-server-vercel
+npx -y mcp-server-grafana

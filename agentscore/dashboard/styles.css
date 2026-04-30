@@ -355,6 +355,40 @@ section {
 .footer strong { color: var(--text-secondary); }
 .footer-sub { margin-top: 4px; font-size: 11px; }
 
+/* JSR Badge */
+.jsr-badge {
+    font-size: 11px;
+    color: var(--accent-primary);
+    padding: 3px 10px;
+    border: 1px solid rgba(124, 92, 255, 0.3);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.jsr-badge:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent-primary);
+}
+
+/* Export Button */
+.export-btn {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.export-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(12px); }

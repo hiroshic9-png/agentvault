@@ -144,6 +144,23 @@ function renderIssues(issues) {
     }).join('');
 }
 
+// Export data as JSON
+async function exportJSON() {
+    try {
+        const res = await fetch('/api/scores');
+        const scores = await res.json();
+        const blob = new Blob([JSON.stringify(scores, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `agentscore-export-${new Date().toISOString().split('T')[0]}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+    } catch (e) {
+        console.error('Export failed:', e);
+    }
+}
+
 // Auto-refresh every 30 seconds
 loadDashboard();
 setInterval(loadDashboard, 30000);
