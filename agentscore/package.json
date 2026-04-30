@@ -1,0 +1,52 @@
+{
+  "name": "agentvault-score",
+  "version": "0.1.0",
+  "description": "Automated quality & security scoring for MCP servers — trust scores for the AI agent ecosystem",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agent",
+    "security",
+    "quality",
+    "scoring",
+    "audit",
+    "trust",
+    "agentscore",
+    "agentvault",
+    "tool-poisoning"
+  ],
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "agentscore": "./src/cli.js"
+  },
+  "files": [
+    "src/",
+    "dashboard/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/cli.js",
+    "scan": "node src/cli.js scan",
+    "batch": "node src/cli.js batch targets.txt",
+    "dashboard": "node dashboard/server.js",
+    "test": "node --test src/test-*.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentvault/agentscore"
+  },
+  "homepage": "https://github.com/agentvault/agentscore#readme",
+  "bugs": {
+    "url": "https://github.com/agentvault/agentscore/issues"
+  },
+  "author": "AgentVault <hello@agentvault.dev>",
+  "license": "MIT"
+}

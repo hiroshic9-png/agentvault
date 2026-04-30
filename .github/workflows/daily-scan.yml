@@ -1,0 +1,47 @@
+name: 🏴‍☠️ AgentScore Daily Scan
+
+on:
+  schedule:
+    # 毎日 UTC 00:00 (JST 09:00) に実行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 手動実行も可能
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        working-directory: agentscore
+        run: npm ci
+
+      - name: Run batch scan
+        working-directory: agentscore
+        run: node src/cli.js batch targets.txt
+        env:
+          # 環境変数でAPI KEYが必要なサーバー用
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload scan results
+        uses: actions/upload-artifact@v4
+        with:
+          name: agentscore-report-${{ github.run_number }}
+          path: agentscore/reports/
+          retention-days: 90
+
+      - name: Commit updated scores
+        run: |
+          git config user.name "AgentScore Bot"
+          git config user.email "bot@agentvault.dev"
+          git add agentscore/reports/
+          git diff --staged --quiet || git commit -m "📊 Daily scan: $(date +%Y-%m-%d)"
+          git push || true

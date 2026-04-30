@@ -1,0 +1,75 @@
+# 🏴‍☠️ AgentVault
+
+> Making AI agents observable, secure, and accountable.
+
+AgentVault is the data infrastructure for the AI agent economy. We build tools that generate trust scores, detect threats, and create intelligence from the MCP (Model Context Protocol) ecosystem.
+
+---
+
+## Packages
+
+| Package | Description | npm |
+|---------|-------------|-----|
+| [`agentvault-gateway`](./gateway) | Audit-logging MCP proxy — sits between your agent and any MCP server | `npx agentvault-gateway` |
+| [`agentvault-score`](./agentscore) | Automated quality & security scoring for MCP servers | `npx agentvault-score scan <target>` |
+| [`agentvault-guard`](./guard) | Security middleware — tool poisoning detection, injection prevention | `npm i agentvault-guard` |
+
+## Data Products
+
+| Product | Description |
+|---------|-------------|
+| [AgentScore Dashboard](./agentscore/dashboard) | Real-time leaderboard of MCP server quality (localhost:3100) |
+| [MCP Quality Report](./intelligence) | Quarterly analysis of ecosystem quality trends |
+| [Daily Intelligence](./intelligence) | Daily market and competitive analysis |
+
+## Architecture
+
+```
+┌─────────────┐     ┌──────────────┐     ┌──────────────┐
+│  AI Agent    │────▶│  Gateway     │────▶│  MCP Server  │
+│  (Claude,    │     │  (Proxy +    │     │  (Any npm    │
+│   Cursor,    │     │   Telemetry) │     │   MCP pkg)   │
+│   etc.)      │     └──────┬───────┘     └──────────────┘
+└──────────────┘            │
+                            ▼
+                    ┌──────────────┐     ┌──────────────┐
+                    │  Telemetry   │     │  AgentScore   │
+                    │  Data Lake   │     │  Scan Data    │
+                    └──────┬───────┘     └──────┬───────┘
+                           │                     │
+                           ▼                     ▼
+                    ┌─────────────────────────────┐
+                    │      Intelligence Engine     │
+                    │   Quality Reports, Alerts,   │
+                    │   Trust Scores, Rankings     │
+                    └─────────────────────────────┘
+```
+
+## Quick Start
+
+### Scan a MCP Server
+```bash
+npx agentvault-score scan "npx -y @modelcontextprotocol/server-memory"
+```
+
+### Proxy a MCP Server with Audit Logging
+```bash
+npx agentvault-gateway --target "npx -y @modelcontextprotocol/server-github"
+```
+
+### Protect Your Agent
+```javascript
+import { createGuard } from 'agentvault-guard';
+
+const guard = createGuard({ mode: 'strict' });
+
+// Before calling any tool:
+const result = guard.check(toolName, args);
+if (!result.allowed) {
+    console.error('🔴 Blocked:', result.reason);
+}
+```
+
+## License
+
+MIT — Built by AgentVault 🏴‍☠️

@@ -1,0 +1,50 @@
+{
+  "name": "agentvault-gateway",
+  "version": "0.1.0",
+  "description": "MCP Proxy Gateway — Intercept, log, and secure all agent-to-MCP-server traffic",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agent",
+    "observability",
+    "audit",
+    "security",
+    "proxy",
+    "llm",
+    "agent-tools"
+  ],
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "agentvault": "./src/cli.js"
+  },
+  "files": [
+    "src/index.js",
+    "src/cli.js",
+    "src/telemetry.js",
+    "src/security.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test src/test-gateway.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "AgentVault <hello@agentvault.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/agentvault/gateway#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentvault/gateway"
+  },
+  "bugs": {
+    "url": "https://github.com/agentvault/gateway/issues"
+  }
+}

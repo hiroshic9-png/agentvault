@@ -1,0 +1,8 @@
+# Test files
+src/test-*.js
+agentvault-logs/
+
+# Dev files
+.DS_Store
+*.log
+node_modules/

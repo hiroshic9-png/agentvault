@@ -1,0 +1,36 @@
+# AgentScore — Extended Scan Targets v3
+# 30+ MCP Servers (Official + Community)
+
+# === Official @modelcontextprotocol ===
+npx -y @modelcontextprotocol/server-filesystem /tmp
+npx -y @modelcontextprotocol/server-memory
+npx -y @modelcontextprotocol/server-sequential-thinking
+npx -y @modelcontextprotocol/server-everything
+npx -y @modelcontextprotocol/server-github
+npx -y @modelcontextprotocol/server-puppeteer
+
+# === Major Companies ===
+npx -y @notionhq/notion-mcp-server
+npx -y @upstash/context7-mcp
+npx -y @railway/mcp-server
+npx -y @mapbox/mcp-server
+npx -y chrome-devtools-mcp
+
+# === Community: Developer Tools ===
+npx -y @executeautomation/playwright-mcp-server
+npx -y @mcp-get-community/server-curl
+npx -y mcp-server-kubernetes
+
+# === Community: Search & Data ===
+npx -y duckduckgo-mcp-server
+npx -y tavily-mcp
+npx -y firecrawl-mcp
+
+# === Community: Productivity ===
+npx -y mcp-obsidian
+npx -y mcp-server-discord
+npx -y mcp-server-linear
+npx -y linear-mcp
+
+# === Community: Database ===
+npx -y mcp-server-sqlite

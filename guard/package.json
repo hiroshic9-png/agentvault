@@ -1,0 +1,39 @@
+{
+  "name": "agentvault-guard",
+  "version": "0.1.0",
+  "description": "Security guard middleware for MCP clients — tool poisoning detection, input validation, and permission control",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "security",
+    "guard",
+    "tool-poisoning",
+    "input-validation",
+    "agentvault",
+    "ai-agent",
+    "middleware"
+  ],
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test src/*.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentvault/agentvault-guard"
+  },
+  "homepage": "https://github.com/agentvault/agentvault-guard#readme",
+  "author": "AgentVault <hello@agentvault.dev>",
+  "license": "MIT"
+}

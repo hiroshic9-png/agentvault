@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentScore — MCP Server Quality Dashboard</title>
+    <meta name="description" content="Real-time quality and security scores for MCP servers. Built by AgentVault.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">🏴‍☠️ <span class="logo-text">AgentScore</span></div>
+            <span class="logo-tag">MCP Quality Intelligence</span>
+        </div>
+        <div class="header-right">
+            <div class="stat-pill" id="headerTotal">
+                <span class="stat-label">Servers</span>
+                <span class="stat-value mono">—</span>
+            </div>
+            <div class="stat-pill" id="headerAvg">
+                <span class="stat-label">Avg Score</span>
+                <span class="stat-value mono">—</span>
+            </div>
+            <div class="stat-pill" id="headerTools">
+                <span class="stat-label">Tools Found</span>
+                <span class="stat-value mono">—</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Grade Distribution -->
+    <section class="grade-section">
+        <h2 class="section-title">Grade Distribution</h2>
+        <div class="grade-grid" id="gradeGrid"></div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section class="leaderboard-section">
+        <h2 class="section-title">🏆 MCP Server Leaderboard</h2>
+        <div class="leaderboard" id="leaderboard"></div>
+    </section>
+
+    <!-- Top Issues -->
+    <section class="issues-section">
+        <h2 class="section-title">⚠️ Industry-Wide Quality Issues</h2>
+        <div class="issues-grid" id="issuesGrid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Built by <strong>AgentVault</strong> 🏴‍☠️ — Making AI agents observable, secure, and accountable.</p>
+        <p class="footer-sub">Data updated: <span id="footerDate">—</span></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
