@@ -5,6 +5,7 @@
 [![npm: score](https://img.shields.io/npm/v/agentvault-score?label=score&color=cc3534)](https://www.npmjs.com/package/agentvault-score)
 [![npm: retry](https://img.shields.io/npm/v/agentvault-retry?label=retry&color=cc3534)](https://www.npmjs.com/package/agentvault-retry)
 [![npm: cache](https://img.shields.io/npm/v/agentvault-cache?label=cache&color=cc3534)](https://www.npmjs.com/package/agentvault-cache)
+[![npm: tools](https://img.shields.io/npm/v/agentvault-tools?label=tools&color=cc3534)](https://www.npmjs.com/package/agentvault-tools)
 [![JSR: @agentvault](https://jsr.io/badges/@agentvault)](https://jsr.io/@agentvault)
 [![GitHub](https://img.shields.io/github/stars/hiroshic9-png/agentvault?style=social)](https://github.com/hiroshic9-png/agentvault)
 
@@ -25,6 +26,7 @@ AgentVault is the data infrastructure for the AI agent economy. We build tools t
 | [`agentvault-guard`](./guard) | Security middleware — tool poisoning detection, injection prevention | `npm i agentvault-guard` |
 | [`agentvault-retry`](./retry) | Resilient MCP calls — exponential backoff, timeout, fallback | `npm i agentvault-retry` |
 | [`agentvault-cache`](./cache) | Smart caching for MCP tool results — reduce latency & API costs | `npm i agentvault-cache` |
+| [`agentvault-tools`](./tools) | **Free web search & fetch — zero API keys required** | `npx agentvault-tools` |
 
 ## Data Products
 
