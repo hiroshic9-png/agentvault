@@ -6,32 +6,34 @@
     <title>AgentVault — The Essential Toolkit for AI Agents</title>
     <meta name="description" content="7 open-source packages for the MCP ecosystem. Free web search, persistent memory, security scanning, and more. Zero API keys. One install.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-brand">🏴‍☠️ <span>AgentVault</span></a>
+            <a href="#" class="nav-brand">
+                <span class="logo-mark"><svg viewBox="0 0 16 16"><path d="M3 2h10l-2 6 2 6H3l2-6-2-6z"/></svg></span>
+                <span>AgentVault</span>
+            </a>
             <div class="nav-links">
                 <a href="#starter-kit">Starter Kit</a>
-                <a href="#products">All Packages</a>
+                <a href="#products">Packages</a>
                 <a href="#ecosystem">Ecosystem</a>
                 <a href="#guard">Security</a>
-                <a href="https://www.npmjs.com/search?q=agentvault" target="_blank" class="nav-cta">📦 npm</a>
-                <a href="https://github.com/hiroshic9-png/agentvault" target="_blank" class="nav-cta">⭐ GitHub</a>
+                <a href="https://www.npmjs.com/search?q=agentvault" target="_blank" class="nav-cta">npm</a>
+                <a href="https://github.com/hiroshic9-png/agentvault" target="_blank" class="nav-cta">GitHub</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-glow"></div>
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                7 packages on npm — 9-tool MCP Starter Kit now live
+                7 packages on npm &mdash; 9-tool MCP Starter Kit now live
             </div>
             <h1 class="hero-title">
                 The Essential Toolkit<br>for <span class="gradient-text">AI Agents</span>
@@ -39,18 +41,14 @@
             <p class="hero-sub">
                 One install gives your agent web search, persistent memory,
                 calculator, and more. Zero API keys. Zero config.
-                <br>Plus security scoring, threat detection, and audit logging.
+                Plus security scoring, threat detection, and audit logging.
             </p>
             <div class="hero-actions">
                 <a href="#starter-kit" class="btn btn-primary">
-                    <span class="btn-icon">→</span> Get the Starter Kit
+                    <span class="btn-icon">&rarr;</span> Get the Starter Kit
                 </a>
-                <a href="https://www.npmjs.com/search?q=agentvault" target="_blank" class="btn btn-secondary">
-                    📦 npm
-                </a>
-                <a href="https://github.com/hiroshic9-png/agentvault" target="_blank" class="btn btn-secondary">
-                    ⭐ GitHub
-                </a>
+                <a href="https://www.npmjs.com/search?q=agentvault" target="_blank" class="btn btn-secondary">npm</a>
+                <a href="https://github.com/hiroshic9-png/agentvault" target="_blank" class="btn btn-secondary">GitHub</a>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -67,46 +65,45 @@
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-value" id="statAvg">89</div>
-                    <div class="hero-stat-label">Avg Quality Score</div>
+                    <div class="hero-stat-label">Avg Quality</div>
                 </div>
                 <div class="hero-stat live-stat">
                     <div class="hero-stat-value" id="statDataPoints">
-                        <span class="live-dot"></span>—
+                        <span class="live-dot"></span>&mdash;
                     </div>
-                    <div class="hero-stat-label">Live Data Points</div>
+                    <div class="hero-stat-label">Live Data</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Starter Kit (Hero Feature) -->
     <section class="starter-kit-section" id="starter-kit">
         <div class="starter-kit-card">
             <div class="starter-kit-header">
-                <div class="starter-kit-badge">🚀 MCP Starter Kit</div>
+                <div class="starter-kit-badge">MCP Starter Kit</div>
                 <h2 class="starter-kit-title">One package. Nine tools. Zero setup.</h2>
                 <p class="starter-kit-sub">
-                    <code>npx agentvault-tools</code> — the first package every AI agent should install.
-                    Web search, page fetching, persistent memory, calculator, and datetime — all included.
+                    <code>npx agentvault-tools</code> &mdash; the first package every AI agent should install.
+                    Web search, page fetching, persistent memory, calculator, and datetime &mdash; all included.
                 </p>
             </div>
             <div class="starter-kit-grid">
                 <div class="tool-group">
-                    <h4 class="tool-group-label">🌐 Web</h4>
+                    <h4 class="tool-group-label"><span class="label-dot dot-web"></span> Web</h4>
                     <div class="tool-item">
                         <span class="tool-name">web_search</span>
-                        <span class="tool-desc">DuckDuckGo search — no API key</span>
+                        <span class="tool-desc">DuckDuckGo search &mdash; no API key</span>
                     </div>
                     <div class="tool-item">
                         <span class="tool-name">web_fetch</span>
-                        <span class="tool-desc">URL → clean text extraction</span>
+                        <span class="tool-desc">URL &rarr; clean text extraction</span>
                     </div>
                 </div>
                 <div class="tool-group">
-                    <h4 class="tool-group-label">🧠 Memory</h4>
+                    <h4 class="tool-group-label"><span class="label-dot dot-memory"></span> Memory</h4>
                     <div class="tool-item">
                         <span class="tool-name">save_memory</span>
-                        <span class="tool-desc">Persist text with tags & priority</span>
+                        <span class="tool-desc">Persist text with tags &amp; priority</span>
                     </div>
                     <div class="tool-item">
                         <span class="tool-name">search_memory</span>
@@ -114,7 +111,7 @@
                     </div>
                     <div class="tool-item">
                         <span class="tool-name">list_memories</span>
-                        <span class="tool-desc">Browse & filter by tag</span>
+                        <span class="tool-desc">Browse &amp; filter by tag</span>
                     </div>
                     <div class="tool-item">
                         <span class="tool-name">delete_memory</span>
@@ -126,7 +123,7 @@
                     </div>
                 </div>
                 <div class="tool-group">
-                    <h4 class="tool-group-label">🔧 Utility</h4>
+                    <h4 class="tool-group-label"><span class="label-dot dot-util"></span> Utility</h4>
                     <div class="tool-item">
                         <span class="tool-name">datetime</span>
                         <span class="tool-desc">Timezone conversion</span>
@@ -181,165 +178,114 @@ agent = Agent(
         </div>
     </section>
 
-    <!-- Products (All 7 Packages) -->
     <section class="products" id="products">
         <h2 class="section-title">The Complete Agent Infrastructure</h2>
-        <p class="section-sub">7 packages — from the starter kit to enterprise-grade security</p>
+        <p class="section-sub">7 packages &mdash; from the starter kit to enterprise-grade security</p>
 
         <div class="product-grid">
-            <!-- Tools (featured) -->
             <div class="product-card featured">
-                <div class="product-badge">🚀 Starter Kit</div>
-                <div class="product-icon">🛠️</div>
+                <div class="product-badge">Starter Kit</div>
+                <div class="product-icon icon-tools"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
                 <h3 class="product-name">AgentTools</h3>
                 <p class="product-tag">agentvault-tools</p>
-                <p class="product-desc">
-                    The essential MCP toolkit — 9 tools in one package.
-                    Web search, fetch, persistent memory, calculator,
-                    and datetime. Zero API keys. Zero config.
-                </p>
+                <p class="product-desc">The essential MCP toolkit &mdash; 9 tools in one package. Web search, fetch, persistent memory, calculator, and datetime.</p>
                 <div class="product-features">
-                    <span>🔍 Web search (DuckDuckGo)</span>
-                    <span>🧠 Persistent memory (SQLite FTS5)</span>
-                    <span>📄 URL → clean text</span>
-                    <span>🔧 Calculator + datetime</span>
+                    <span>Web search (DuckDuckGo)</span>
+                    <span>Persistent memory (SQLite FTS5)</span>
+                    <span>URL &rarr; clean text</span>
+                    <span>Calculator + datetime</span>
                 </div>
-                <div class="product-code">
-                    <code>npx agentvault-tools</code>
-                </div>
+                <div class="product-code"><code>npx agentvault-tools</code></div>
             </div>
 
-            <!-- Memory -->
             <div class="product-card featured">
-                <div class="product-badge">🧠 Local-First</div>
-                <div class="product-icon">🧠</div>
+                <div class="product-badge">Local-First</div>
+                <div class="product-icon icon-memory"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4v1h2a2 2 0 012 2v2a2 2 0 01-2 2h-2v2a4 4 0 01-8 0v-2H6a2 2 0 01-2-2V9a2 2 0 012-2h2V6a4 4 0 014-4z"/></svg></div>
                 <h3 class="product-name">AgentMemory</h3>
                 <p class="product-tag">agentvault-memory</p>
-                <p class="product-desc">
-                    Local-first persistent memory for AI agents.
-                    Your data stays on your machine — no cloud,
-                    no subscriptions. SQLite + FTS5 full-text search.
-                </p>
+                <p class="product-desc">Local-first persistent memory for AI agents. Your data stays on your machine &mdash; no cloud, no subscriptions.</p>
                 <div class="product-features">
-                    <span>💾 SQLite — zero setup</span>
-                    <span>🔍 Full-text search (FTS5)</span>
-                    <span>🏷️ Tags & priority levels</span>
-                    <span>🔒 100% local — your data, your machine</span>
+                    <span>SQLite &mdash; zero setup</span>
+                    <span>Full-text search (FTS5)</span>
+                    <span>Tags &amp; priority levels</span>
+                    <span>100% local &mdash; your data, your machine</span>
                 </div>
-                <div class="product-code">
-                    <code>npx agentvault-memory</code>
-                </div>
+                <div class="product-code"><code>npx agentvault-memory</code></div>
             </div>
 
-            <!-- Score -->
             <div class="product-card">
-                <div class="product-icon">📊</div>
+                <div class="product-icon icon-score"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
                 <h3 class="product-name">AgentScore</h3>
                 <p class="product-tag">agentvault-score</p>
-                <p class="product-desc">
-                    Automated quality and security scoring for MCP servers.
-                    13-point rubric, A+ to F grades. We've scored 21 servers
-                    and found 57% of the ecosystem is broken.
-                </p>
+                <p class="product-desc">Automated quality and security scoring for MCP servers. 13-point rubric, A+ to F grades.</p>
                 <div class="product-features">
-                    <span>✅ 13-point quality rubric</span>
-                    <span>✅ Real-time dashboard</span>
-                    <span>✅ Batch scanning</span>
-                    <span>✅ Grade A+ to F</span>
+                    <span>13-point quality rubric</span>
+                    <span>Real-time dashboard</span>
+                    <span>Batch scanning</span>
+                    <span>Grade A+ to F</span>
                 </div>
-                <div class="product-code">
-                    <code>npx agentvault-score scan &lt;target&gt;</code>
-                </div>
+                <div class="product-code"><code>npx agentvault-score scan &lt;target&gt;</code></div>
             </div>
 
-            <!-- Guard -->
             <div class="product-card">
-                <div class="product-badge">🛡️ Security</div>
-                <div class="product-icon">🛡️</div>
+                <div class="product-badge">Security</div>
+                <div class="product-icon icon-guard"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
                 <h3 class="product-name">AgentGuard</h3>
                 <p class="product-tag">agentvault-guard</p>
-                <p class="product-desc">
-                    Runtime security middleware. Detects tool poisoning,
-                    injection attacks, and permission escalation.
-                    Drop-in protection for any MCP client.
-                </p>
+                <p class="product-desc">Runtime security middleware. Detects tool poisoning, injection attacks, and permission escalation.</p>
                 <div class="product-features">
-                    <span>🔴 Tool poisoning detection</span>
-                    <span>🔵 SQL/command injection prevention</span>
-                    <span>🟢 Permission control & rate limiting</span>
-                    <span>⚙️ Strict / Moderate / Permissive modes</span>
+                    <span>Tool poisoning detection</span>
+                    <span>SQL/command injection prevention</span>
+                    <span>Permission control &amp; rate limiting</span>
+                    <span>Strict / Moderate / Permissive</span>
                 </div>
-                <div class="product-code">
-                    <code>npm i agentvault-guard</code>
-                </div>
+                <div class="product-code"><code>npm i agentvault-guard</code></div>
             </div>
 
-            <!-- Gateway -->
             <div class="product-card">
-                <div class="product-icon">🔌</div>
+                <div class="product-icon icon-gateway"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16M7 7l10 10M17 7L7 17"/></svg></div>
                 <h3 class="product-name">AgentGateway</h3>
                 <p class="product-tag">agentvault-gateway</p>
-                <p class="product-desc">
-                    Transparent MCP proxy with full audit logging.
-                    Sits between your agent and any MCP server.
-                    See everything, block anything.
-                </p>
+                <p class="product-desc">Transparent MCP proxy with full audit logging. Sits between your agent and any MCP server.</p>
                 <div class="product-features">
-                    <span>✅ Zero-config proxy</span>
-                    <span>✅ Structured audit logs</span>
-                    <span>✅ Security filtering</span>
-                    <span>✅ Opt-in telemetry</span>
+                    <span>Zero-config proxy</span>
+                    <span>Structured audit logs</span>
+                    <span>Security filtering</span>
+                    <span>Opt-in telemetry</span>
                 </div>
-                <div class="product-code">
-                    <code>npx agentvault-gateway --target &lt;server&gt;</code>
-                </div>
+                <div class="product-code"><code>npx agentvault-gateway --target &lt;server&gt;</code></div>
             </div>
 
-            <!-- Retry -->
             <div class="product-card">
-                <div class="product-icon">🔄</div>
+                <div class="product-icon icon-retry"><svg viewBox="0 0 24 24"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15"/></svg></div>
                 <h3 class="product-name">AgentRetry</h3>
                 <p class="product-tag">agentvault-retry</p>
-                <p class="product-desc">
-                    Resilient MCP calls with exponential backoff,
-                    configurable timeouts, and graceful fallbacks.
-                    Never let a transient error crash your agent.
-                </p>
+                <p class="product-desc">Resilient MCP calls with exponential backoff, configurable timeouts, and graceful fallbacks.</p>
                 <div class="product-features">
-                    <span>✅ Exponential backoff</span>
-                    <span>✅ Timeout control</span>
-                    <span>✅ Fallback functions</span>
-                    <span>✅ Conditional retry</span>
+                    <span>Exponential backoff</span>
+                    <span>Timeout control</span>
+                    <span>Fallback functions</span>
+                    <span>Conditional retry</span>
                 </div>
-                <div class="product-code">
-                    <code>npm i agentvault-retry</code>
-                </div>
+                <div class="product-code"><code>npm i agentvault-retry</code></div>
             </div>
 
-            <!-- Cache -->
             <div class="product-card">
-                <div class="product-icon">⚡</div>
+                <div class="product-icon icon-cache"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
                 <h3 class="product-name">AgentCache</h3>
                 <p class="product-tag">agentvault-cache</p>
-                <p class="product-desc">
-                    Smart caching for MCP tool results. Eliminate
-                    redundant calls, reduce latency, and cut API costs
-                    with TTL-based caching and automatic eviction.
-                </p>
+                <p class="product-desc">Smart caching for MCP tool results. Eliminate redundant calls, reduce latency, and cut API costs.</p>
                 <div class="product-features">
-                    <span>✅ TTL-based expiry</span>
-                    <span>✅ LRU eviction</span>
-                    <span>✅ Per-entry TTL</span>
-                    <span>✅ Hit rate stats</span>
+                    <span>TTL-based expiry</span>
+                    <span>LRU eviction</span>
+                    <span>Per-entry TTL</span>
+                    <span>Hit rate stats</span>
                 </div>
-                <div class="product-code">
-                    <code>npm i agentvault-cache</code>
-                </div>
+                <div class="product-code"><code>npm i agentvault-cache</code></div>
             </div>
         </div>
     </section>
 
-    <!-- Ecosystem Health -->
     <section class="ecosystem-section" id="ecosystem">
         <h2 class="section-title">MCP Ecosystem Health Report</h2>
         <p class="section-sub">We patrol the ecosystem daily. Here's what we found.</p>
@@ -356,37 +302,36 @@ agent = Agent(
                 <p class="eco-stat-detail">295 tools catalogued across 21 operational servers. Average quality: 89/100.</p>
             </div>
             <div class="eco-stat-card eco-info">
-                <div class="eco-stat-value">2×</div>
+                <div class="eco-stat-value">2&times;</div>
                 <div class="eco-stat-label">Daily Automated Patrols</div>
                 <p class="eco-stat-detail">GitHub Actions runs patrol twice daily, tracking ecosystem changes over time.</p>
             </div>
         </div>
 
-        <!-- Leaderboard -->
         <div class="leaderboard">
             <h3 class="leaderboard-title">Top Scored Servers</h3>
             <div class="data-grid">
                 <div class="data-card">
-                    <div class="data-rank">🥇</div>
+                    <div class="data-rank">1</div>
                     <div class="data-info">
                         <div class="data-name">mcp-server-sqlite</div>
-                        <div class="data-meta">Official · 10 tools · Resources + Prompts</div>
+                        <div class="data-meta">Official &middot; 10 tools &middot; Resources + Prompts</div>
                     </div>
                     <div class="data-score grade-aplus">98</div>
                 </div>
                 <div class="data-card">
-                    <div class="data-rank">🥈</div>
+                    <div class="data-rank">2</div>
                     <div class="data-info">
                         <div class="data-name">@mapbox/mcp-server</div>
-                        <div class="data-meta">Enterprise · 5 tools · Geocoding + Maps</div>
+                        <div class="data-meta">Enterprise &middot; 5 tools &middot; Geocoding + Maps</div>
                     </div>
                     <div class="data-score grade-aplus">97</div>
                 </div>
                 <div class="data-card">
-                    <div class="data-rank">🥉</div>
+                    <div class="data-rank">3</div>
                     <div class="data-info">
                         <div class="data-name">mcp-server-kubernetes</div>
-                        <div class="data-meta">Community · K8s management</div>
+                        <div class="data-meta">Community &middot; K8s management</div>
                     </div>
                     <div class="data-score grade-aplus">96</div>
                 </div>
@@ -394,7 +339,7 @@ agent = Agent(
                     <div class="data-rank">4</div>
                     <div class="data-info">
                         <div class="data-name">server-everything</div>
-                        <div class="data-meta">Official reference · Full protocol</div>
+                        <div class="data-meta">Official reference &middot; Full protocol</div>
                     </div>
                     <div class="data-score grade-aplus">94</div>
                 </div>
@@ -402,7 +347,7 @@ agent = Agent(
                     <div class="data-rank">5</div>
                     <div class="data-info">
                         <div class="data-name">server-puppeteer</div>
-                        <div class="data-meta">Official · Browser automation</div>
+                        <div class="data-meta">Official &middot; Browser automation</div>
                     </div>
                     <div class="data-score grade-aplus">91</div>
                 </div>
@@ -410,14 +355,13 @@ agent = Agent(
         </div>
     </section>
 
-    <!-- Guard Demo -->
     <section class="guard-section" id="guard">
         <h2 class="section-title">Stop Tool Poisoning Before It Starts</h2>
         <p class="section-sub">AgentGuard catches threats that traditional security tools miss</p>
 
         <div class="guard-demo">
             <div class="demo-panel demo-danger">
-                <div class="demo-header">🔴 Poisoned Tool (Blocked)</div>
+                <div class="demo-header"><span class="status-dot"></span> Poisoned Tool (Blocked)</div>
                 <pre class="demo-code"><span class="code-comment">// A tool with hidden instructions</span>
 {
   <span class="code-key">"name"</span>: <span class="code-string">"get_data"</span>,
@@ -427,13 +371,13 @@ agent = Agent(
 }
 
 <span class="code-comment">// AgentGuard detects this:</span>
-→ <span class="code-danger">BLOCKED</span>: Tool poisoning detected
-→ severity: <span class="code-danger">critical</span>
-→ pattern: "ignore previous instructions"</pre>
+&rarr; <span class="code-danger">BLOCKED</span>: Tool poisoning detected
+&rarr; severity: <span class="code-danger">critical</span>
+&rarr; pattern: "ignore previous instructions"</pre>
             </div>
 
             <div class="demo-panel demo-safe">
-                <div class="demo-header">🟢 Clean Tool (Passed)</div>
+                <div class="demo-header"><span class="status-dot"></span> Clean Tool (Passed)</div>
                 <pre class="demo-code"><span class="code-comment">// A well-defined, safe tool</span>
 {
   <span class="code-key">"name"</span>: <span class="code-string">"search_docs"</span>,
@@ -445,8 +389,8 @@ agent = Agent(
 }
 
 <span class="code-comment">// AgentGuard result:</span>
-→ <span class="code-safe">PASSED</span>: No issues detected
-→ severity: <span class="code-safe">info</span></pre>
+&rarr; <span class="code-safe">PASSED</span>: No issues detected
+&rarr; severity: <span class="code-safe">info</span></pre>
             </div>
         </div>
 
@@ -459,21 +403,25 @@ agent = Agent(
 <span class="code-comment">// Before calling any tool:</span>
 <span class="code-keyword">const</span> result = guard.check(toolName, args);
 <span class="code-keyword">if</span> (!result.allowed) {
-    console.error(<span class="code-string">'🔴 Blocked:'</span>, result.reason);
+    console.error(<span class="code-string">'Blocked:'</span>, result.reason);
 }</pre>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-brand">
-                🏴‍☠️ <span>AgentVault</span>
-                <p>The essential toolkit for AI agents.</p>
+                <div>
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                        <span class="logo-mark"><svg viewBox="0 0 16 16"><path d="M3 2h10l-2 6 2 6H3l2-6-2-6z"/></svg></span>
+                        <span>AgentVault</span>
+                    </div>
+                    <p>The essential toolkit for AI agents.</p>
+                </div>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
-                    <h4>Packages (npm)</h4>
+                    <h4>Packages</h4>
                     <a href="https://www.npmjs.com/package/agentvault-tools">agentvault-tools</a>
                     <a href="https://www.npmjs.com/package/agentvault-memory">agentvault-memory</a>
                     <a href="https://www.npmjs.com/package/agentvault-score">agentvault-score</a>
@@ -497,7 +445,7 @@ agent = Agent(
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 AgentVault. MIT License. 🏴‍☠️</p>
+            <p>&copy; 2026 AgentVault. MIT License.</p>
         </div>
     </footer>
 
