@@ -1,5 +1,5 @@
 /**
- * AgentVault Landing Page — Micro-interactions
+ * AgentVault Landing Page — Micro-interactions v2
  */
 
 // Animate stat counters on scroll
@@ -22,8 +22,9 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
 
             // Animate counters
+            if (entry.target.id === 'statPackages') animateCounter(entry.target, 7, 800);
+            if (entry.target.id === 'statTools') animateCounter(entry.target, 9, 800);
             if (entry.target.id === 'statServers') animateCounter(entry.target, 21);
-            if (entry.target.id === 'statTools') animateCounter(entry.target, 295);
             if (entry.target.id === 'statAvg') animateCounter(entry.target, 89);
 
             observer.unobserve(entry.target);
@@ -32,7 +33,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 // Observe all animated elements
-document.querySelectorAll('.hero-stat-value, .product-card, .data-card').forEach(el => {
+document.querySelectorAll('.hero-stat-value, .product-card, .data-card, .eco-stat-card').forEach(el => {
     observer.observe(el);
 });
 
@@ -61,6 +62,22 @@ document.querySelectorAll('.product-code').forEach(el => {
                 el.querySelector('code').style.color = '';
             }, 1500);
         });
+    });
+});
+
+// ========================================
+// Install Tabs (Starter Kit section)
+// ========================================
+document.querySelectorAll('.install-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Deactivate all tabs and panels
+        document.querySelectorAll('.install-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.install-panel').forEach(p => p.classList.remove('active'));
+        
+        // Activate clicked tab and its panel
+        tab.classList.add('active');
+        const target = tab.getAttribute('data-target');
+        document.getElementById(`panel-${target}`).classList.add('active');
     });
 });
 
