@@ -1,15 +1,35 @@
 {
   "name": "agentvault-cache",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Smart caching for MCP tool calls — reduce latency and API consumption",
-  "keywords": ["mcp", "model-context-protocol", "cache", "ai-agent", "agentvault", "performance"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cache",
+    "ai-agent",
+    "agentvault",
+    "performance"
+  ],
   "type": "module",
   "main": "src/index.js",
-  "exports": { ".": "./src/index.js" },
-  "files": ["src/", "README.md", "LICENSE"],
-  "scripts": { "test": "node --test src/*.test.js" },
-  "engines": { "node": ">=18.0.0" },
-  "repository": { "type": "git", "url": "https://github.com/hiroshic9-png/agentvault" },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test src/*.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiroshic9-png/agentvault"
+  },
   "homepage": "https://github.com/hiroshic9-png/agentvault#readme",
   "author": "AgentVault <hello@agentvault.dev>",
   "license": "MIT"
