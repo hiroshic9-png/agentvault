@@ -1,152 +1,142 @@
-# 🏴‍☠️ AgentVault — 告知コンテンツ集
+# 🏴‍☠️ AgentVault — 告知コンテンツ集 v2
 
 > 投稿先別に最適化した告知文。オーナーがコピペで使えるように。
+> Updated: 2026-05-01 — agentvault-tools追加、エコシステムレポート反映
 
 ---
 
-## 1. Hacker News (Show HN)
+## 1. Hacker News (Show HN) — メイン投稿
 
-### タイトル
+### タイトル（A案：衝撃データ型）
 ```
-Show HN: AgentVault – Open-source security and quality scoring for MCP servers
+Show HN: We patrolled 46 MCP servers – 57% failed to respond
+```
+
+### タイトル（B案：ツール型）
+```
+Show HN: AgentVault – Free web search for AI agents, plus MCP quality scoring
 ```
 
 ### 本文
 ```
 Hi HN,
 
-I built AgentVault — a set of open-source tools for auditing and securing AI agent tool integrations (MCP servers).
+I built AgentVault — a set of open-source tools for the MCP (Model Context Protocol) ecosystem.
 
-The MCP ecosystem is growing fast (100+ npm packages), but there's no way to know if a server is well-built, secure, or even functional before you connect your AI agent to it.
+The big finding: I wrote a patrol agent that connects to 46 MCP servers on npm, enumerates their tools, and calls read-only operations. **57% of servers failed to even connect.** Every failure was the same error: `Connection closed`. Many published packages are broken or require undocumented setup.
 
-AgentVault solves this with three tools:
+What AgentVault does:
 
-1. **AgentScore** — Automated quality scoring (A+ to F) for any MCP server. We've already scanned 21 servers and found the average quality score is 89/100. SQLite scored highest (98/100).
+1. **agentvault-tools** — Free web search & fetch MCP server. No API keys required. Just `npx agentvault-tools` and your agent can search the web. (Every existing search MCP server requires API key registration.)
 
-2. **AgentGuard** — Runtime security middleware that detects tool poisoning attacks (hidden instructions in tool descriptions that trick your agent).
+2. **agentvault-score** — Automated quality scoring (A+ to F) for any MCP server. We've scored 21 servers, average: 89/100. SQLite scored highest (98/100).
 
-3. **AgentGateway** — A transparent MCP proxy that logs every tool call your agent makes, with zero code changes.
+3. **agentvault-guard** — Runtime tool poisoning detection. Catches hidden instructions in tool descriptions.
 
-All three are on npm:
-- `npm i agentvault-score`
-- `npm i agentvault-guard`
-- `npm i agentvault-gateway`
+4. **agentvault-gateway** — Transparent MCP proxy with full audit logging.
 
-Live leaderboard: https://hiroshic9-png.github.io/agentvault/
+Plus retry, cache, and more — 6 packages total.
+
+Full ecosystem health report: https://github.com/hiroshic9-png/agentvault/blob/main/intelligence/ecosystem-report-2026-05.md
+
+Live site: https://hiroshic9-png.github.io/agentvault/
 GitHub: https://github.com/hiroshic9-png/agentvault
 
-We're also running automated daily scans via GitHub Actions to track quality trends over time.
-
-Happy to answer questions about MCP security, tool poisoning, or the scoring methodology.
+Happy to answer questions about MCP reliability, tool poisoning, or the scoring methodology.
 ```
 
 ---
 
-## 2. Reddit (r/MachineLearning, r/LocalLLaMA, r/ChatGPTCoding)
-
-### r/MachineLearning タイトル
-```
-[P] AgentVault: Open-source quality scoring and security tools for MCP (Model Context Protocol) servers
-```
+## 2. Reddit
 
 ### r/LocalLLaMA タイトル
 ```
-I built an automated quality scanner for MCP servers — here are the results from scanning 21 servers
+57% of MCP servers on npm fail to respond — I built a patrol agent to test them all
+```
+
+### r/MachineLearning タイトル
+```
+[P] AgentVault: We tested 46 MCP servers — here's what we found about ecosystem reliability
 ```
 
 ### 本文 (共通)
 ```
-The MCP ecosystem now has 100+ npm packages, but there's no quality control. I built AgentVault to fix this.
+I wrote a patrol agent that connects to every MCP server on npm and tests them automatically.
 
-**What it does:**
-- Scans any MCP server and gives it a quality score (A+ to F)
-- Detects tool poisoning attacks (hidden instructions in tool descriptions)
-- Proxies all agent-to-server traffic with full audit logging
+The result: 57% failed to connect. All with the same error. Many packages are published but broken.
 
-**Interesting findings from scanning 21 servers:**
-- Average quality: 89/100
-- Top 3: SQLite (98), Mapbox (97), Kubernetes (96)
-- Most servers lack proper input schemas
-- Some have descriptions over 500 chars (potential poisoning vector)
+So I built AgentVault — 6 open-source tools:
 
-**Try it:**
+🔍 **agentvault-tools** — Free web search for AI agents. No API keys. `npx agentvault-tools`
+📊 **agentvault-score** — Quality scoring for MCP servers (A+ to F)
+🛡️ **agentvault-guard** — Tool poisoning detection
+🔌 **agentvault-gateway** — MCP proxy with audit logging
+🔄 **agentvault-retry** — Resilient MCP calls with fallback
+⚡ **agentvault-cache** — Smart result caching
+
+Full report: https://github.com/hiroshic9-png/agentvault/blob/main/intelligence/ecosystem-report-2026-05.md
+
+Try it:
 ```bash
+npx agentvault-tools
 npx agentvault-score scan "npx -y @modelcontextprotocol/server-memory"
 ```
 
 GitHub: https://github.com/hiroshic9-png/agentvault
-npm: `npm i agentvault-score`
 ```
 
 ---
 
 ## 3. X (Twitter) — スレッド形式
 
-### ツイート1
+### ツイート1（フック：衝撃データ）
 ```
-🏴‍☠️ I scanned 21 MCP servers and scored their quality.
+🏴‍☠️ I patrolled 46 MCP servers on npm.
 
-Results:
-🥇 SQLite — 98/100
-🥈 Mapbox — 97/100  
-🥉 Kubernetes — 96/100
+57% failed to even connect.
 
-Average: 89/100
+All 26 failures: same error — "Connection closed"
 
-Most servers have decent tool quality, but almost none validate input schemas properly.
+Many packages are published but completely broken.
 
-Full leaderboard → https://hiroshic9-png.github.io/agentvault/
+Full report → github.com/hiroshic9-png/agentvault/blob/main/intelligence/ecosystem-report-2026-05.md
 ```
 
-### ツイート2
+### ツイート2（ソリューション）
 ```
-Tool poisoning is a real threat in the MCP ecosystem.
+So I built 6 tools to fix the MCP ecosystem:
 
-A malicious server can hide "ignore previous instructions" in a tool description, and your AI agent will follow it.
+🔍 Free web search (no API keys!)
+📊 Quality scoring (A+ to F)
+🛡️ Tool poisoning detection
+🔌 Audit proxy
+🔄 Auto-retry with fallback
+⚡ Smart caching
 
-I built AgentGuard to detect this automatically:
-npm i agentvault-guard
-
-Open source: github.com/hiroshic9-png/agentvault
-```
-
-### ツイート3
-```
-Want to audit every tool call your AI agent makes?
-
-AgentVault Gateway = transparent MCP proxy with zero code changes.
-
-npx agentvault-gateway --target "your-mcp-server"
-
-Every request is logged. Every response is tracked. Full audit trail.
-
-🏴‍☠️ github.com/hiroshic9-png/agentvault
+All open source: github.com/hiroshic9-png/agentvault
 ```
 
----
+### ツイート3（CTA）
+```
+The easiest way to try it:
 
-## 4. Dev.to / Hashnode ブログ記事タイトル案
+npx agentvault-tools
 
-```
-I Scanned 21 MCP Servers — Here's What I Found About AI Agent Security
-```
+→ Your AI agent gets free web search instantly.
+   No API keys. No registration. No cost.
 
-```
-Tool Poisoning: The Hidden Threat in Your AI Agent's MCP Tools
-```
-
-```
-Building an Open-Source Quality Score for the MCP Ecosystem
+npm: npmjs.com/package/agentvault-tools
 ```
 
 ---
 
 ## 投稿タイミング推奨
 
-| プラットフォーム | 最適時間 (UTC) | 最適時間 (JST) |
-|----------------|---------------|---------------|
-| Hacker News | 火曜 14:00-16:00 | 火曜 23:00-翌1:00 |
-| Reddit ML | 月曜 15:00-17:00 | 月曜 24:00-翌2:00 |
-| X (Twitter) | 水曜 13:00-15:00 | 水曜 22:00-24:00 |
+| プラットフォーム | 最適時間 (JST) | 予定 |
+|----------------|---------------|------|
+| Hacker News | 火曜 23:00 | **5/6 (火)** |
+| Reddit | 月曜 24:00 | 5/5 (月) or 5/6 (火) |
+| X (Twitter) | 水曜 22:00 | 5/7 (水) or HNと同日 |
 
-> 今日は木曜(JST)なので、**今日中にX投稿 → 来週火曜にHN投稿**が最適。
+> **推奨**: HN投稿を最優先。Reddit/Xは反応を見て同日〜翌日。
+> HNタイトルはA案（衝撃データ型）の方がクリック率が高い見込み。
