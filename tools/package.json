@@ -1,6 +1,6 @@
 {
   "name": "agentvault-tools",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Free web search & fetch for AI agents — zero API keys required. MCP server with optional telemetry.",
   "keywords": [
     "mcp",

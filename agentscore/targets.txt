@@ -1,5 +1,10 @@
-# AgentScore — Extended Scan Targets v4
-# 50+ MCP Servers (Official + Enterprise + Community)
+# AgentScore — Extended Scan Targets v5
+# Curated MCP Servers with reliability notes
+# 
+# Legend:
+#   ✅ = Connects without API key (confirmed 2026-05-01)
+#   🔑 = Requires API key / env var (will fail without it)
+#   ❌ = Broken / unmaintained
 
 # === Official @modelcontextprotocol ===
 npx -y @modelcontextprotocol/server-filesystem /tmp
@@ -8,10 +13,10 @@ npx -y @modelcontextprotocol/server-sequential-thinking
 npx -y @modelcontextprotocol/server-everything
 npx -y @modelcontextprotocol/server-github
 npx -y @modelcontextprotocol/server-puppeteer
-npx -y @modelcontextprotocol/server-postgres
-npx -y @modelcontextprotocol/server-brave-search
-npx -y @modelcontextprotocol/server-slack
-npx -y @modelcontextprotocol/server-google-maps
+# 🔑 npx -y @modelcontextprotocol/server-postgres
+# 🔑 npx -y @modelcontextprotocol/server-brave-search
+# 🔑 npx -y @modelcontextprotocol/server-slack
+# 🔑 npx -y @modelcontextprotocol/server-google-maps
 
 # === Major Companies ===
 npx -y @notionhq/notion-mcp-server
@@ -19,48 +24,48 @@ npx -y @upstash/context7-mcp
 npx -y @railway/mcp-server
 npx -y @mapbox/mcp-server
 npx -y chrome-devtools-mcp
-npx -y @stripe/mcp
-npx -y @sentry/mcp-server
-npx -y @supabase/mcp-server
+# 🔑 npx -y @stripe/mcp
+# 🔑 npx -y @sentry/mcp-server
+# 🔑 npx -y @supabase/mcp-server
 
 # === Community: Browser & Automation ===
 npx -y @executeautomation/playwright-mcp-server
 npx -y @mcp-get-community/server-curl
-npx -y mcp-server-fetch
+# ❌ npx -y mcp-server-fetch
 
 # === Community: DevOps & Infrastructure ===
 npx -y mcp-server-kubernetes
-npx -y @docker/mcp-server
-npx -y mcp-server-git
-npx -y mcp-server-terraform
+# ❌ npx -y @docker/mcp-server
+# ❌ npx -y mcp-server-git
+# ❌ npx -y mcp-server-terraform
 
 # === Community: Search & Web ===
 npx -y duckduckgo-mcp-server
 npx -y tavily-mcp
-npx -y firecrawl-mcp
-npx -y @anthropic/mcp-server-brave-search
+# 🔑 npx -y firecrawl-mcp
+# 🔑 npx -y @anthropic/mcp-server-brave-search
 
 # === Community: Database ===
 npx -y mcp-server-sqlite
-npx -y mcp-server-redis
+# 🔑 npx -y mcp-server-redis
 npx -y mcp-server-mysql
-npx -y mcp-server-mongodb
+# ❌ npx -y mcp-server-mongodb
 
 # === Community: Productivity ===
-npx -y mcp-obsidian
+# ❌ npx -y mcp-obsidian
 npx -y mcp-server-discord
 npx -y mcp-server-linear
-npx -y linear-mcp
-npx -y mcp-server-todoist
-npx -y mcp-server-trello
+# ❌ npx -y linear-mcp
+# 🔑 npx -y mcp-server-todoist
+# ❌ npx -y mcp-server-trello
 
 # === Community: AI & Code ===
-npx -y mcp-server-langchain
-npx -y mcp-server-openapi
-npx -y mcp-server-semgrep
+# ❌ npx -y mcp-server-langchain
+# ❌ npx -y mcp-server-openapi
+# ❌ npx -y mcp-server-semgrep
 
 # === Community: Cloud & SaaS ===
-npx -y mcp-server-aws
-npx -y mcp-server-cloudflare
-npx -y mcp-server-vercel
-npx -y mcp-server-grafana
+# 🔑 npx -y mcp-server-aws
+# ❌ npx -y mcp-server-cloudflare
+# ❌ npx -y mcp-server-vercel
+# ❌ npx -y mcp-server-grafana

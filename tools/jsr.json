@@ -1,0 +1,12 @@
+{
+  "name": "@agentvault/tools",
+  "version": "0.1.0",
+  "exports": "./src/index.js",
+  "publish": {
+    "include": [
+      "src/",
+      "README.md",
+      "LICENSE"
+    ]
+  }
+}

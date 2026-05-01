@@ -22,7 +22,7 @@ import { randomUUID } from 'crypto';
 import { appendFileSync, mkdirSync, existsSync } from 'fs';
 import { join } from 'path';
 
-const VERSION = '0.1.0';
+const VERSION = '0.2.0';
 const TELEMETRY_ENDPOINT = 'https://agentvault-telemetry.onrender.com/api/telemetry';
 
 export class AgentVaultTools {
@@ -85,6 +85,33 @@ export class AgentVaultTools {
             required: ['url'],
           },
         },
+        {
+          name: 'datetime',
+          description: 'Get current date and time in any timezone. Useful for scheduling, time-sensitive queries, and timezone conversions.',
+          inputSchema: {
+            type: 'object',
+            properties: {
+              timezone: {
+                type: 'string',
+                description: 'IANA timezone (e.g., "America/New_York", "Asia/Tokyo", "Europe/London"). Default: UTC',
+              },
+            },
+          },
+        },
+        {
+          name: 'calc',
+          description: 'Evaluate a mathematical expression. Supports +, -, *, /, %, ** (power), parentheses, and Math functions (sqrt, round, floor, ceil, abs, PI, E).',
+          inputSchema: {
+            type: 'object',
+            properties: {
+              expression: {
+                type: 'string',
+                description: 'Mathematical expression to evaluate (e.g., "(2 + 3) * 4", "Math.sqrt(144)")',
+              },
+            },
+            required: ['expression'],
+          },
+        },
       ],
     }));
 
@@ -131,6 +158,36 @@ export class AgentVaultTools {
               outputSize: result.length,
               error: null,
             });
+            break;
+          }
+
+          case 'datetime': {
+            const tz = (args && args.timezone) || 'UTC';
+            try {
+              const now = new Date();
+              const formatted = now.toLocaleString('en-US', {
+                timeZone: tz, weekday: 'long', year: 'numeric', month: 'long',
+                day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false,
+              });
+              const iso = now.toLocaleString('sv', { timeZone: tz }).replace(' ', 'T');
+              result = `**${formatted}**\nTimezone: ${tz}\nISO: ${iso}\nUnix: ${Math.floor(now.getTime() / 1000)}`;
+            } catch {
+              result = `Error: Invalid timezone "${tz}". Use IANA format (e.g., America/New_York)`;
+            }
+            this._recordTelemetry({ tool: 'datetime', latencyMs: Date.now() - start, resultCount: 1, outputSize: result.length, error: null });
+            break;
+          }
+
+          case 'calc': {
+            const expr = args.expression;
+            try {
+              const value = Function('Math', `"use strict"; return (${expr})`)(Math);
+              if (typeof value !== 'number' && typeof value !== 'bigint') throw new Error('Result is not a number');
+              result = `${expr} = **${value}**`;
+            } catch (e) {
+              result = `Error evaluating "${expr}": ${e.message}`;
+            }
+            this._recordTelemetry({ tool: 'calc', latencyMs: Date.now() - start, resultCount: 1, outputSize: result.length, error: null });
             break;
           }
 
