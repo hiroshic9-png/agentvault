@@ -1,35 +1,52 @@
 # 🏴‍☠️ agentvault-tools
 
-**Free web search & fetch for AI agents — zero API keys required.**
+**The essential MCP toolkit — 9 tools, zero API keys, one install.**
 
-An MCP server that gives your AI agent instant access to web search and page fetching, with no API key registration, no rate limit hassle, no cost.
+Give your AI agent web search, page fetching, persistent memory, timezone conversion, and a calculator — all in a single MCP server. No API keys, no accounts, no cloud required.
 
-## Why?
+## Why this?
 
-Every existing search MCP server requires API keys:
-- `server-brave-search` → Brave API key
-- `tavily-mcp` → Tavily API key
-- `server-google-maps` → Google API key
+Starting with MCP? You need this **one package**:
 
-**agentvault-tools requires nothing.** Install and go.
+```
+npx agentvault-tools
+```
+
+That's it. Your agent now has 9 tools.
 
 ## Tools
 
+### 🔍 Web
 | Tool | Description |
 |------|-------------|
-| `web_search` | Search the web via DuckDuckGo (no API key) |
-| `web_fetch` | Fetch any URL and get clean text (HTML→text conversion) |
+| `web_search` | Search via DuckDuckGo (no API key!) |
+| `web_fetch` | Fetch any URL → clean text |
+
+### 🧮 Utility
+| Tool | Description |
+|------|-------------|
+| `datetime` | Current time in any timezone |
+| `calc` | Evaluate math expressions |
+
+### 🧠 Memory (persistent, local)
+| Tool | Description |
+|------|-------------|
+| `save_memory` | Save text with tags & importance |
+| `search_memory` | Full-text search across all memories |
+| `list_memories` | Browse recent or filter by tag |
+| `delete_memory` | Remove a memory |
+| `memory_stats` | Usage statistics |
+
+Memory persists across sessions in a local SQLite database (`~/.agentvault/memory.db`). Data never leaves your machine.
 
 ## Quick Start
 
 ### Claude Desktop
 
-Add to your `claude_desktop_config.json`:
-
 ```json
 {
   "mcpServers": {
-    "web-tools": {
+    "tools": {
       "command": "npx",
       "args": ["-y", "agentvault-tools"]
     }
@@ -37,42 +54,35 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-### Cursor
-
-Add to your MCP settings:
+### Cursor / Windsurf
 
 ```json
 {
-  "web-tools": {
+  "tools": {
     "command": "npx",
     "args": ["-y", "agentvault-tools"]
   }
 }
 ```
 
-### Programmatic
+### What happens next
 
-```javascript
-import { AgentVaultTools } from 'agentvault-tools';
-const server = new AgentVaultTools();
-await server.start();
-```
+Your agent can now:
+- **Search**: "Find the latest Node.js release notes" → `web_search`
+- **Read**: "What does that page say?" → `web_fetch`  
+- **Remember**: "Remember that the API key is xyz" → `save_memory`
+- **Recall**: "What was that API key?" → `search_memory`
+- **Calculate**: "What's 15% of 2,450?" → `calc`
+- **Time**: "What time is it in Tokyo?" → `datetime`
 
-## Telemetry (opt-in)
+## Privacy
 
-By default, **no data is sent anywhere**. All logs stay local.
-
-To help improve the MCP ecosystem, you can opt in to anonymous usage telemetry:
-
-```bash
-AGENTVAULT_TELEMETRY=true npx agentvault-tools
-```
-
-What we collect: tool name, latency, output size, error status.
-What we **never** collect: search queries, URLs, page content, any user data.
+- **All data stays local**. Memory is stored at `~/.agentvault/memory.db`
+- **No telemetry by default**. Set `AGENTVAULT_TELEMETRY=true` to opt in
+- **Search queries and URLs are never sent** even with telemetry on
 
 ## Part of AgentVault
 
-🏴‍☠️ [github.com/hiroshic9-png/agentvault](https://github.com/hiroshic9-png/agentvault)
+🏴‍☠️ [github.com/hiroshic9-png/agentvault](https://github.com/hiroshic9-png/agentvault) — Open-source trust infrastructure for AI agents.
 
 MIT License

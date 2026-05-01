@@ -1,17 +1,20 @@
 {
   "name": "agentvault-tools",
-  "version": "0.2.0",
-  "description": "Free web search & fetch for AI agents — zero API keys required. MCP server with optional telemetry.",
+  "version": "0.3.0",
+  "description": "The essential MCP toolkit — web search, fetch, memory, calculator, and more. Zero API keys. One install.",
   "keywords": [
     "mcp",
     "model-context-protocol",
     "ai-agent",
     "web-search",
     "fetch",
+    "memory",
+    "persistent-memory",
     "duckduckgo",
     "llm",
     "tools",
-    "no-api-key"
+    "no-api-key",
+    "starter-kit"
   ],
   "type": "module",
   "main": "src/index.js",
@@ -29,6 +32,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
+    "better-sqlite3": "^11.0.0",
     "cheerio": "^1.0.0"
   },
   "engines": {
