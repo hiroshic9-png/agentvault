@@ -1,5 +1,8 @@
 # 🏴‍☠️ agentvault-tools
 
+[![npm version](https://img.shields.io/npm/v/agentvault-tools?color=cc3534)](https://www.npmjs.com/package/agentvault-tools)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 **The essential MCP toolkit — 9 tools, zero API keys, one install.**
 
 Give your AI agent web search, page fetching, persistent memory, timezone conversion, and a calculator — all in a single MCP server. No API keys, no accounts, no cloud required.
@@ -83,6 +86,16 @@ Your agent can now:
 
 ## Part of AgentVault
 
-🏴‍☠️ [github.com/hiroshic9-png/agentvault](https://github.com/hiroshic9-png/agentvault) — Open-source trust infrastructure for AI agents.
+🏴‍☠️ **[AgentVault](https://github.com/hiroshic9-png/agentvault)** — The essential toolkit for AI agents.
+
+| Package | What it does |
+|---------|-------------|
+| **agentvault-tools** | 🛠️ 9-tool MCP starter kit (you are here) |
+| [agentvault-memory](https://www.npmjs.com/package/agentvault-memory) | 🧠 Local-first persistent memory (standalone) |
+| [agentvault-guard](https://www.npmjs.com/package/agentvault-guard) | 🛡️ Tool poisoning detection |
+| [agentvault-gateway](https://www.npmjs.com/package/agentvault-gateway) | 🔌 MCP proxy with audit logging |
+| [agentvault-score](https://www.npmjs.com/package/agentvault-score) | 📊 Quality scoring (A+ to F) |
+| [agentvault-retry](https://www.npmjs.com/package/agentvault-retry) | 🔄 Resilient calls with backoff |
+| [agentvault-cache](https://www.npmjs.com/package/agentvault-cache) | ⚡ Smart result caching |
 
 MIT License

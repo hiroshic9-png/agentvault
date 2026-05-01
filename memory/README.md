@@ -1,5 +1,8 @@
 # 🧠 agentvault-memory
 
+[![npm version](https://img.shields.io/npm/v/agentvault-memory?color=cc3534)](https://www.npmjs.com/package/agentvault-memory)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 **Local-first persistent memory for AI agents — zero setup, full-text search, no cloud required.**
 
 Give your AI agent long-term memory that survives across sessions. Unlike knowledge graph solutions that require complex setup, agentvault-memory is a simple note-taking system with powerful full-text search.
@@ -57,6 +60,18 @@ All data is stored locally at `~/.agentvault/memory.db` (SQLite).
 
 ## Part of AgentVault
 
-🏴‍☠️ [github.com/hiroshic9-png/agentvault](https://github.com/hiroshic9-png/agentvault)
+🏴‍☠️ **[AgentVault](https://github.com/hiroshic9-png/agentvault)** — The essential toolkit for AI agents.
+
+> 💡 **Tip:** Memory is included in [agentvault-tools](https://www.npmjs.com/package/agentvault-tools) (9 tools in one package). Use the standalone `agentvault-memory` only if you want memory without the web/utility tools.
+
+| Package | What it does |
+|---------|-------------|
+| [agentvault-tools](https://www.npmjs.com/package/agentvault-tools) | 🛠️ 9-tool MCP starter kit (includes memory) |
+| **agentvault-memory** | 🧠 Local-first persistent memory (you are here) |
+| [agentvault-guard](https://www.npmjs.com/package/agentvault-guard) | 🛡️ Tool poisoning detection |
+| [agentvault-gateway](https://www.npmjs.com/package/agentvault-gateway) | 🔌 MCP proxy with audit logging |
+| [agentvault-score](https://www.npmjs.com/package/agentvault-score) | 📊 Quality scoring (A+ to F) |
+| [agentvault-retry](https://www.npmjs.com/package/agentvault-retry) | 🔄 Resilient calls with backoff |
+| [agentvault-cache](https://www.npmjs.com/package/agentvault-cache) | ⚡ Smart result caching |
 
 MIT License
