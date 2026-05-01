@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgentVault — Trust Infrastructure for AI Agents</title>
-    <meta name="description" content="Open-source security and quality infrastructure for the MCP ecosystem. Scan, score, and protect AI agent tool integrations.">
+    <title>AgentVault — The Essential Toolkit for AI Agents</title>
+    <meta name="description" content="7 open-source packages for the MCP ecosystem. Free web search, persistent memory, security scanning, and more. Zero API keys. One install.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -15,11 +15,11 @@
         <div class="nav-inner">
             <a href="#" class="nav-brand">🏴‍☠️ <span>AgentVault</span></a>
             <div class="nav-links">
-                <a href="#products">Products</a>
-                <a href="#data">Live Data</a>
+                <a href="#starter-kit">Starter Kit</a>
+                <a href="#products">All Packages</a>
+                <a href="#ecosystem">Ecosystem</a>
                 <a href="#guard">Security</a>
                 <a href="https://www.npmjs.com/search?q=agentvault" target="_blank" class="nav-cta">📦 npm</a>
-                <a href="https://jsr.io/@agentvault" target="_blank" class="nav-cta">📋 JSR</a>
                 <a href="https://github.com/hiroshic9-png/agentvault" target="_blank" class="nav-cta">⭐ GitHub</a>
             </div>
         </div>
@@ -31,21 +31,22 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Now live on npm & JSR — 6 packages published
+                7 packages on npm — 9-tool MCP Starter Kit now live
             </div>
             <h1 class="hero-title">
-                Trust Infrastructure<br>for <span class="gradient-text">AI Agents</span>
+                The Essential Toolkit<br>for <span class="gradient-text">AI Agents</span>
             </h1>
             <p class="hero-sub">
-                Open-source security and quality scoring for the MCP ecosystem.
-                <br>Scan servers. Detect threats. Protect your agents.
+                One install gives your agent web search, persistent memory,
+                calculator, and more. Zero API keys. Zero config.
+                <br>Plus security scoring, threat detection, and audit logging.
             </p>
             <div class="hero-actions">
-                <a href="https://www.npmjs.com/search?q=agentvault" target="_blank" class="btn btn-primary">
-                    <span class="btn-icon">→</span> Install from npm
+                <a href="#starter-kit" class="btn btn-primary">
+                    <span class="btn-icon">→</span> Get the Starter Kit
                 </a>
-                <a href="https://jsr.io/@agentvault" target="_blank" class="btn btn-secondary">
-                    Install from JSR
+                <a href="https://www.npmjs.com/search?q=agentvault" target="_blank" class="btn btn-secondary">
+                    📦 npm
                 </a>
                 <a href="https://github.com/hiroshic9-png/agentvault" target="_blank" class="btn btn-secondary">
                     ⭐ GitHub
@@ -53,12 +54,16 @@
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-value" id="statServers">21</div>
-                    <div class="hero-stat-label">Servers Scored</div>
+                    <div class="hero-stat-value" id="statPackages">7</div>
+                    <div class="hero-stat-label">Packages</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-value" id="statTools">295</div>
-                    <div class="hero-stat-label">Tools Catalogued</div>
+                    <div class="hero-stat-value" id="statTools">9</div>
+                    <div class="hero-stat-label">Built-in Tools</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value" id="statServers">21</div>
+                    <div class="hero-stat-label">Servers Scored</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-value" id="statAvg">89</div>
@@ -70,29 +75,171 @@
                     </div>
                     <div class="hero-stat-label">Live Data Points</div>
                 </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-value">5</div>
-                    <div class="hero-stat-label">Packages Published</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Starter Kit (Hero Feature) -->
+    <section class="starter-kit-section" id="starter-kit">
+        <div class="starter-kit-card">
+            <div class="starter-kit-header">
+                <div class="starter-kit-badge">🚀 MCP Starter Kit</div>
+                <h2 class="starter-kit-title">One package. Nine tools. Zero setup.</h2>
+                <p class="starter-kit-sub">
+                    <code>npx agentvault-tools</code> — the first package every AI agent should install.
+                    Web search, page fetching, persistent memory, calculator, and datetime — all included.
+                </p>
+            </div>
+            <div class="starter-kit-grid">
+                <div class="tool-group">
+                    <h4 class="tool-group-label">🌐 Web</h4>
+                    <div class="tool-item">
+                        <span class="tool-name">web_search</span>
+                        <span class="tool-desc">DuckDuckGo search — no API key</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-name">web_fetch</span>
+                        <span class="tool-desc">URL → clean text extraction</span>
+                    </div>
+                </div>
+                <div class="tool-group">
+                    <h4 class="tool-group-label">🧠 Memory</h4>
+                    <div class="tool-item">
+                        <span class="tool-name">save_memory</span>
+                        <span class="tool-desc">Persist text with tags & priority</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-name">search_memory</span>
+                        <span class="tool-desc">Full-text search (SQLite FTS5)</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-name">list_memories</span>
+                        <span class="tool-desc">Browse & filter by tag</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-name">delete_memory</span>
+                        <span class="tool-desc">Remove entries</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-name">memory_stats</span>
+                        <span class="tool-desc">Usage statistics</span>
+                    </div>
+                </div>
+                <div class="tool-group">
+                    <h4 class="tool-group-label">🔧 Utility</h4>
+                    <div class="tool-item">
+                        <span class="tool-name">datetime</span>
+                        <span class="tool-desc">Timezone conversion</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-name">calc</span>
+                        <span class="tool-desc">Math expression evaluator</span>
+                    </div>
+                </div>
+            </div>
+            <div class="starter-kit-install">
+                <div class="install-tabs">
+                    <div class="install-tab active" data-target="claude">Claude Desktop</div>
+                    <div class="install-tab" data-target="cursor">Cursor / Windsurf</div>
+                    <div class="install-tab" data-target="crewai">CrewAI</div>
+                </div>
+                <div class="install-panel active" id="panel-claude">
+                    <pre class="install-code"><span class="code-comment">// claude_desktop_config.json</span>
+{
+  <span class="code-key">"mcpServers"</span>: {
+    <span class="code-key">"agentvault"</span>: {
+      <span class="code-key">"command"</span>: <span class="code-string">"npx"</span>,
+      <span class="code-key">"args"</span>: [<span class="code-string">"-y"</span>, <span class="code-string">"agentvault-tools"</span>]
+    }
+  }
+}</pre>
+                </div>
+                <div class="install-panel" id="panel-cursor">
+                    <pre class="install-code"><span class="code-comment">// .cursor/mcp.json  or  .windsurf/mcp.json</span>
+{
+  <span class="code-key">"mcpServers"</span>: {
+    <span class="code-key">"agentvault"</span>: {
+      <span class="code-key">"command"</span>: <span class="code-string">"npx"</span>,
+      <span class="code-key">"args"</span>: [<span class="code-string">"-y"</span>, <span class="code-string">"agentvault-tools"</span>]
+    }
+  }
+}</pre>
+                </div>
+                <div class="install-panel" id="panel-crewai">
+                    <pre class="install-code"><span class="code-keyword">from</span> crewai <span class="code-keyword">import</span> Agent
+<span class="code-keyword">from</span> crewai.mcp <span class="code-keyword">import</span> MCPServerStdio
+
+agent = Agent(
+    role=<span class="code-string">"Research Analyst"</span>,
+    mcps=[MCPServerStdio(
+        command=<span class="code-string">"npx"</span>,
+        args=[<span class="code-string">"-y"</span>, <span class="code-string">"agentvault-tools"</span>],
+    )]
+)</pre>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products -->
+    <!-- Products (All 7 Packages) -->
     <section class="products" id="products">
-        <h2 class="section-title">Three Pillars of Agent Trust</h2>
-        <p class="section-sub">A complete toolkit for securing and benchmarking the AI agent ecosystem</p>
+        <h2 class="section-title">The Complete Agent Infrastructure</h2>
+        <p class="section-sub">7 packages — from the starter kit to enterprise-grade security</p>
 
         <div class="product-grid">
+            <!-- Tools (featured) -->
+            <div class="product-card featured">
+                <div class="product-badge">🚀 Starter Kit</div>
+                <div class="product-icon">🛠️</div>
+                <h3 class="product-name">AgentTools</h3>
+                <p class="product-tag">agentvault-tools</p>
+                <p class="product-desc">
+                    The essential MCP toolkit — 9 tools in one package.
+                    Web search, fetch, persistent memory, calculator,
+                    and datetime. Zero API keys. Zero config.
+                </p>
+                <div class="product-features">
+                    <span>🔍 Web search (DuckDuckGo)</span>
+                    <span>🧠 Persistent memory (SQLite FTS5)</span>
+                    <span>📄 URL → clean text</span>
+                    <span>🔧 Calculator + datetime</span>
+                </div>
+                <div class="product-code">
+                    <code>npx agentvault-tools</code>
+                </div>
+            </div>
+
+            <!-- Memory -->
+            <div class="product-card featured">
+                <div class="product-badge">🧠 Local-First</div>
+                <div class="product-icon">🧠</div>
+                <h3 class="product-name">AgentMemory</h3>
+                <p class="product-tag">agentvault-memory</p>
+                <p class="product-desc">
+                    Local-first persistent memory for AI agents.
+                    Your data stays on your machine — no cloud,
+                    no subscriptions. SQLite + FTS5 full-text search.
+                </p>
+                <div class="product-features">
+                    <span>💾 SQLite — zero setup</span>
+                    <span>🔍 Full-text search (FTS5)</span>
+                    <span>🏷️ Tags & priority levels</span>
+                    <span>🔒 100% local — your data, your machine</span>
+                </div>
+                <div class="product-code">
+                    <code>npx agentvault-memory</code>
+                </div>
+            </div>
+
             <!-- Score -->
             <div class="product-card">
                 <div class="product-icon">📊</div>
                 <h3 class="product-name">AgentScore</h3>
-                <p class="product-tag">@agentvault/score</p>
+                <p class="product-tag">agentvault-score</p>
                 <p class="product-desc">
-                    Automated quality and security scoring for MCP servers. 
-                    Analyze tool descriptions, input schemas, security patterns, 
-                    and protocol compliance in one command.
+                    Automated quality and security scoring for MCP servers.
+                    13-point rubric, A+ to F grades. We've scored 21 servers
+                    and found 57% of the ecosystem is broken.
                 </p>
                 <div class="product-features">
                     <span>✅ 13-point quality rubric</span>
@@ -101,19 +248,19 @@
                     <span>✅ Grade A+ to F</span>
                 </div>
                 <div class="product-code">
-                    <code>npm i agentvault-score</code>
+                    <code>npx agentvault-score scan &lt;target&gt;</code>
                 </div>
             </div>
 
             <!-- Guard -->
-            <div class="product-card featured">
+            <div class="product-card">
                 <div class="product-badge">🛡️ Security</div>
                 <div class="product-icon">🛡️</div>
                 <h3 class="product-name">AgentGuard</h3>
-                <p class="product-tag">@agentvault/guard</p>
+                <p class="product-tag">agentvault-guard</p>
                 <p class="product-desc">
-                    Runtime security middleware that protects AI agents from 
-                    tool poisoning, injection attacks, and permission escalation. 
+                    Runtime security middleware. Detects tool poisoning,
+                    injection attacks, and permission escalation.
                     Drop-in protection for any MCP client.
                 </p>
                 <div class="product-features">
@@ -131,20 +278,20 @@
             <div class="product-card">
                 <div class="product-icon">🔌</div>
                 <h3 class="product-name">AgentGateway</h3>
-                <p class="product-tag">@agentvault/gateway</p>
+                <p class="product-tag">agentvault-gateway</p>
                 <p class="product-desc">
-                    Transparent MCP proxy that sits between your agent and any 
-                    MCP server. Full audit logging, telemetry, and security 
-                    filtering without modifying your client.
+                    Transparent MCP proxy with full audit logging.
+                    Sits between your agent and any MCP server.
+                    See everything, block anything.
                 </p>
                 <div class="product-features">
                     <span>✅ Zero-config proxy</span>
                     <span>✅ Structured audit logs</span>
                     <span>✅ Security filtering</span>
-                    <span>✅ Performance telemetry</span>
+                    <span>✅ Opt-in telemetry</span>
                 </div>
                 <div class="product-code">
-                    <code>npm i agentvault-gateway</code>
+                    <code>npx agentvault-gateway --target &lt;server&gt;</code>
                 </div>
             </div>
 
@@ -154,8 +301,8 @@
                 <h3 class="product-name">AgentRetry</h3>
                 <p class="product-tag">agentvault-retry</p>
                 <p class="product-desc">
-                    Resilient MCP tool calls with exponential backoff, 
-                    configurable timeouts, and graceful fallbacks. 
+                    Resilient MCP calls with exponential backoff,
+                    configurable timeouts, and graceful fallbacks.
                     Never let a transient error crash your agent.
                 </p>
                 <div class="product-features">
@@ -175,8 +322,8 @@
                 <h3 class="product-name">AgentCache</h3>
                 <p class="product-tag">agentvault-cache</p>
                 <p class="product-desc">
-                    Smart caching for MCP tool results. Eliminate 
-                    redundant calls, reduce latency, and cut API costs 
+                    Smart caching for MCP tool results. Eliminate
+                    redundant calls, reduce latency, and cut API costs
                     with TTL-based caching and automatic eviction.
                 </p>
                 <div class="product-features">
@@ -189,81 +336,77 @@
                     <code>npm i agentvault-cache</code>
                 </div>
             </div>
-
-            <!-- Tools -->
-            <div class="product-card featured">
-                <div class="product-badge">🆓 Free</div>
-                <div class="product-icon">🔍</div>
-                <h3 class="product-name">AgentTools</h3>
-                <p class="product-tag">agentvault-tools</p>
-                <p class="product-desc">
-                    Free web search and page fetching for AI agents. 
-                    No API keys, no registration, no rate limit hassle. 
-                    Just install and search the web.
-                </p>
-                <div class="product-features">
-                    <span>🔍 Web search (DuckDuckGo)</span>
-                    <span>📄 URL → clean text</span>
-                    <span>🆓 Zero API keys required</span>
-                    <span>⚡ Instant setup</span>
-                </div>
-                <div class="product-code">
-                    <code>npx agentvault-tools</code>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Live Data -->
-    <section class="data-section" id="data">
-        <h2 class="section-title">Live Ecosystem Intelligence</h2>
-        <p class="section-sub">Real-time quality data from scanning the MCP server ecosystem</p>
+    <!-- Ecosystem Health -->
+    <section class="ecosystem-section" id="ecosystem">
+        <h2 class="section-title">MCP Ecosystem Health Report</h2>
+        <p class="section-sub">We patrol the ecosystem daily. Here's what we found.</p>
 
-        <div class="data-grid">
-            <div class="data-card">
-                <div class="data-rank">🥇</div>
-                <div class="data-info">
-                    <div class="data-name">mcp-server-sqlite</div>
-                    <div class="data-meta">Official · 10 tools · Resources + Prompts</div>
-                </div>
-                <div class="data-score grade-aplus">98</div>
+        <div class="ecosystem-grid">
+            <div class="eco-stat-card eco-danger">
+                <div class="eco-stat-value">57%</div>
+                <div class="eco-stat-label">Connection Failure Rate</div>
+                <p class="eco-stat-detail">26 of 46 servers failed to respond. All with the same error: "Connection closed".</p>
             </div>
-            <div class="data-card">
-                <div class="data-rank">🥈</div>
-                <div class="data-info">
-                    <div class="data-name">@mapbox/mcp-server</div>
-                    <div class="data-meta">Enterprise · 5 tools · Geocoding + Maps</div>
-                </div>
-                <div class="data-score grade-aplus">97</div>
+            <div class="eco-stat-card eco-success">
+                <div class="eco-stat-value">21</div>
+                <div class="eco-stat-label">Servers Successfully Scored</div>
+                <p class="eco-stat-detail">295 tools catalogued across 21 operational servers. Average quality: 89/100.</p>
             </div>
-            <div class="data-card">
-                <div class="data-rank">🥉</div>
-                <div class="data-info">
-                    <div class="data-name">mcp-server-kubernetes</div>
-                    <div class="data-meta">Community · K8s management</div>
-                </div>
-                <div class="data-score grade-aplus">96</div>
-            </div>
-            <div class="data-card">
-                <div class="data-rank">4</div>
-                <div class="data-info">
-                    <div class="data-name">server-everything</div>
-                    <div class="data-meta">Official reference · Full protocol</div>
-                </div>
-                <div class="data-score grade-aplus">94</div>
-            </div>
-            <div class="data-card">
-                <div class="data-rank">5</div>
-                <div class="data-info">
-                    <div class="data-name">server-puppeteer</div>
-                    <div class="data-meta">Official · Browser automation</div>
-                </div>
-                <div class="data-score grade-aplus">91</div>
+            <div class="eco-stat-card eco-info">
+                <div class="eco-stat-value">2×</div>
+                <div class="eco-stat-label">Daily Automated Patrols</div>
+                <p class="eco-stat-detail">GitHub Actions runs patrol twice daily, tracking ecosystem changes over time.</p>
             </div>
         </div>
 
-        <div class="data-cta">
-            <a href="http://localhost:3100" class="btn btn-secondary">View Full Dashboard →</a>
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h3 class="leaderboard-title">Top Scored Servers</h3>
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="data-rank">🥇</div>
+                    <div class="data-info">
+                        <div class="data-name">mcp-server-sqlite</div>
+                        <div class="data-meta">Official · 10 tools · Resources + Prompts</div>
+                    </div>
+                    <div class="data-score grade-aplus">98</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-rank">🥈</div>
+                    <div class="data-info">
+                        <div class="data-name">@mapbox/mcp-server</div>
+                        <div class="data-meta">Enterprise · 5 tools · Geocoding + Maps</div>
+                    </div>
+                    <div class="data-score grade-aplus">97</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-rank">🥉</div>
+                    <div class="data-info">
+                        <div class="data-name">mcp-server-kubernetes</div>
+                        <div class="data-meta">Community · K8s management</div>
+                    </div>
+                    <div class="data-score grade-aplus">96</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-rank">4</div>
+                    <div class="data-info">
+                        <div class="data-name">server-everything</div>
+                        <div class="data-meta">Official reference · Full protocol</div>
+                    </div>
+                    <div class="data-score grade-aplus">94</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-rank">5</div>
+                    <div class="data-info">
+                        <div class="data-name">server-puppeteer</div>
+                        <div class="data-meta">Official · Browser automation</div>
+                    </div>
+                    <div class="data-score grade-aplus">91</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -309,7 +452,7 @@
 
         <div class="guard-usage">
             <h3>Quick Start</h3>
-            <pre class="usage-code"><span class="code-keyword">import</span> { createGuard } <span class="code-keyword">from</span> <span class="code-string">'@agentvault/guard'</span>;
+            <pre class="usage-code"><span class="code-keyword">import</span> { createGuard } <span class="code-keyword">from</span> <span class="code-string">'agentvault-guard'</span>;
 
 <span class="code-keyword">const</span> guard = createGuard({ mode: <span class="code-string">'strict'</span> });
 
@@ -326,17 +469,18 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 🏴‍☠️ <span>AgentVault</span>
-                <p>Making AI agents observable, secure, and accountable.</p>
+                <p>The essential toolkit for AI agents.</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
-                    <h4>npm</h4>
+                    <h4>Packages (npm)</h4>
+                    <a href="https://www.npmjs.com/package/agentvault-tools">agentvault-tools</a>
+                    <a href="https://www.npmjs.com/package/agentvault-memory">agentvault-memory</a>
                     <a href="https://www.npmjs.com/package/agentvault-score">agentvault-score</a>
                     <a href="https://www.npmjs.com/package/agentvault-guard">agentvault-guard</a>
                     <a href="https://www.npmjs.com/package/agentvault-gateway">agentvault-gateway</a>
                     <a href="https://www.npmjs.com/package/agentvault-retry">agentvault-retry</a>
                     <a href="https://www.npmjs.com/package/agentvault-cache">agentvault-cache</a>
-                    <a href="https://www.npmjs.com/package/agentvault-tools">agentvault-tools</a>
                 </div>
                 <div class="footer-col">
                     <h4>JSR</h4>
@@ -348,11 +492,12 @@
                     <h4>Resources</h4>
                     <a href="https://github.com/hiroshic9-png/agentvault">GitHub</a>
                     <a href="https://jsr.io/@agentvault">JSR Registry</a>
+                    <a href="https://github.com/hiroshic9-png/agentvault/blob/main/intelligence/ecosystem-report-2026-05.md">Ecosystem Report</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 AgentVault. MIT License.</p>
+            <p>© 2026 AgentVault. MIT License. 🏴‍☠️</p>
         </div>
     </footer>
 

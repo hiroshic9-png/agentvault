@@ -1,5 +1,5 @@
 /* ==========================================
-   AgentVault Site — Premium Design System
+   AgentVault Site — Premium Design System v2
    ========================================== */
 
 :root {
@@ -23,6 +23,7 @@
     --grade-a: #60a5fa;
     --danger: #f87171;
     --safe: #34d399;
+    --warning: #fbbf24;
 
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -262,6 +263,155 @@ section {
     margin-bottom: 48px;
 }
 
+/* ========== STARTER KIT SECTION ========== */
+.starter-kit-section {
+    padding: 60px 32px 100px;
+}
+.starter-kit-card {
+    max-width: 960px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(124, 92, 255, 0.06) 0%, var(--bg-card) 40%);
+    border: 1px solid rgba(124, 92, 255, 0.25);
+    border-radius: 24px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+}
+.starter-kit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 2px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
+.starter-kit-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.starter-kit-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--accent-gradient);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+.starter-kit-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+.starter-kit-sub {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.starter-kit-sub code {
+    font-family: var(--font-mono);
+    background: rgba(124, 92, 255, 0.15);
+    color: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Tool Groups Grid */
+.starter-kit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.tool-group {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+}
+.tool-group-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(30, 30, 53, 0.5);
+}
+.tool-item:last-child { border-bottom: none; }
+.tool-name {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent-light);
+    font-weight: 600;
+}
+.tool-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Install Tabs */
+.starter-kit-install {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.install-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+}
+.install-tab {
+    flex: 1;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+}
+.install-tab:hover {
+    color: var(--text-secondary);
+    background: rgba(124, 92, 255, 0.05);
+}
+.install-tab.active {
+    color: var(--accent-light);
+    border-bottom-color: var(--accent);
+    background: rgba(124, 92, 255, 0.08);
+}
+.install-panel {
+    display: none;
+    padding: 24px;
+}
+.install-panel.active { display: block; }
+.install-code {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    white-space: pre;
+    overflow-x: auto;
+    background: none;
+    border: none;
+    margin: 0;
+}
+
 /* ========== PRODUCTS ========== */
 .product-grid {
     display: grid;
@@ -339,6 +489,75 @@ section {
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--accent-light);
+}
+
+/* ========== ECOSYSTEM HEALTH ========== */
+.ecosystem-section {
+    padding: 100px 32px;
+}
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+.eco-stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.eco-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+}
+.eco-stat-card.eco-danger {
+    border-color: rgba(248, 113, 113, 0.3);
+    background: linear-gradient(180deg, rgba(248, 113, 113, 0.05) 0%, var(--bg-card) 100%);
+}
+.eco-stat-card.eco-success {
+    border-color: rgba(52, 211, 153, 0.3);
+    background: linear-gradient(180deg, rgba(52, 211, 153, 0.05) 0%, var(--bg-card) 100%);
+}
+.eco-stat-card.eco-info {
+    border-color: rgba(96, 165, 250, 0.3);
+    background: linear-gradient(180deg, rgba(96, 165, 250, 0.05) 0%, var(--bg-card) 100%);
+}
+.eco-stat-value {
+    font-family: var(--font-mono);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.eco-danger .eco-stat-value { color: var(--danger); }
+.eco-success .eco-stat-value { color: var(--safe); }
+.eco-info .eco-stat-value { color: var(--grade-a); }
+.eco-stat-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+.eco-stat-detail {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.leaderboard {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.leaderboard-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--text-secondary);
 }
 
 /* ========== LIVE DATA ========== */
@@ -537,7 +756,7 @@ section {
 }
 
 .hero-title, .hero-sub, .hero-actions, .hero-stats,
-.product-card, .data-card {
+.product-card, .data-card, .eco-stat-card, .starter-kit-card {
     animation: fadeInUp 0.6s ease forwards;
 }
 .hero-sub { animation-delay: 0.1s; }
@@ -568,8 +787,12 @@ section {
 @media (max-width: 900px) {
     .product-grid { grid-template-columns: 1fr; }
     .guard-demo { grid-template-columns: 1fr; }
+    .starter-kit-grid { grid-template-columns: 1fr; }
+    .ecosystem-grid { grid-template-columns: 1fr; }
     .hero-title { font-size: 36px; }
     .hero-stats { grid-template-columns: repeat(3, 1fr); }
     .nav-links a:not(.nav-cta) { display: none; }
     .footer-inner { flex-direction: column; gap: 32px; }
+    .starter-kit-card { padding: 28px 20px; }
+    .starter-kit-title { font-size: 22px; }
 }
